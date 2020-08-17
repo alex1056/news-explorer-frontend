@@ -8,11 +8,9 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  entry: { main: './src1/js/index.js' },
-  // entry: { main: './src/index.js' },
+  entry: { main: './src/js/index.js', articles: './src/js/articles.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    // filename: 'main.js',
     filename: '[name].[chunkhash].js',
   },
   module: {
@@ -30,11 +28,10 @@ module.exports = {
           'postcss-loader',
         ],
       },
-      // пример настройки плагина image-webpack-loader
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
         use: [
-          'file-loader?name=../images/[name].[ext]', // указали папку, куда складывать изображения
+          'file-loader?name=../images/[name].[ext]',
           {
             loader: 'image-webpack-loader',
             options: {},
@@ -49,7 +46,6 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // filename: 'style.css',
       filename: 'style.[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
@@ -62,9 +58,15 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      // template: './src/index.html',
-      template: './src1/pages/index.html',
+      template: './src/pages/index.html',
       filename: 'index.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: './src/pages/articles.html',
+      filename: 'articles.html',
+      chunks: ['articles'],
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

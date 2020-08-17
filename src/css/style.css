@@ -1,0 +1,10 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+
+h1 {
+  color: rgb(66, 240, 57);
+}
+
+body {
+  background-color: #25d33f;
+}
