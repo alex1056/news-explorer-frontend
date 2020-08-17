@@ -1,0 +1,7 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/body/body.css);
+
+h1 {
+  color: rgb(162, 167, 0);
+}
