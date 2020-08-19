@@ -1,0 +1,8 @@
+.about__container {
+  display: grid;
+  width: 1232px;
+  margin: 0 auto;
+  /* background-color: aqua; */
+  grid-template-columns: 464px 1fr;
+  grid-column-gap: 56px;
+}

@@ -1,0 +1,7 @@
+.header__container {
+  width: 1232px;
+  /* background-color: aqua; */
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}

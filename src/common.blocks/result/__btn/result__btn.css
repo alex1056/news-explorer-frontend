@@ -1,0 +1,20 @@
+.result__btn {
+  background: #FFF;
+  border-radius: 80px;
+  color: #1A1B22;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  width: 288px;
+  height: 64px;
+  box-shadow: none;
+  margin: 0 auto;
+}
+
+.result__btn:hover {
+  background: #e8e8e9;
+}
+
+.result__btn:focus {
+  background: #e8e8e9;
+}

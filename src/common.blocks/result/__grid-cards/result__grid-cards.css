@@ -1,0 +1,12 @@
+.result__grid-cards {
+  width: 100%;
+  /* background: brown; */
+  display: grid;
+  margin-bottom: 64px;
+  margin-top: 64px;
+
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}

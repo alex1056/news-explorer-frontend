@@ -1,0 +1,9 @@
+
+.result__save-article-container {
+  position: absolute;
+  height: 40px;
+  right: 24px;
+  top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}

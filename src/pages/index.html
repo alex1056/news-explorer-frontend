@@ -6,12 +6,191 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>" />
+  <!-- <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>" /> -->
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
-  <h1 class="body">Index hello</h1>
-  <script src="<%= htmlWebpackPlugin.files.js %>" type="module"></script>
+  <div class="page">
+    <header class="header">
+      <div class="header__container">
+        <a href="./" class="header__logo link header__link">NewsExplorer</a>
+        <ul class="header__menu">
+          <li class="header__menu-item header__menu-item_selected">
+            <a href="./" class="link header__link">Главная</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="link header__link">Сохраненные статьи</a>
+          </li>
+          <li class="header__menu-item auth-btn">
+            <a href="#" class="link header__link">Авторизоваться</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="search">
+        <div class="search__container">
+          <h1 class="content-title">Что в мире творится?</h1>
+          <p class="text search__text">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.
+          </p>
+          <form class="search__form" name="new">
+            <input type="text" name="searchText" class="search__input" placeholder="Введите тему новости" />
+            <button type="submit" class="button search__button">Искать</button>
+          </form>
+        </div>
+      </section>
+      <section class="result">
+        <div class="result__container">
+          <h2 class="content-title result__content-title">Результаты поиска</h2>
+          <div class="result__grid-cards">
+
+            <div class="result__card">
+              <div class="result__save-article-container">
+                <div class="result__notification result__notification_enabled">
+                  <p class="result__notification-text">Войдите, чтобы сохранять статьи</p>
+                </div>
+
+                <div class="result__save-article-btn"></div>
+              </div>
+
+              <img src="/src/images/img1.png" alt="Природа 1" class="result__img">
+              <p class="result__date">2 августа, 2019</p>
+              <h3 class="content-subtitle result__content-subtitle">Национальное достояние – парки</h3>
+              <p class="text result__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться
+                к природе.</p>
+              <p class="result__source">Лента.ру</p>
+            </div>
+
+
+
+            <div class="result__card">
+
+              <div class="result__save-article-container">
+                <div class="result__notification result__notification_enabled">
+                  <p class="result__notification-text">Войдите, чтобы сохранять статьи</p>
+                </div>
+
+                <div class="result__save-article-btn result__save-article-btn_saved"></div>
+              </div>
+
+
+
+              <img src="/src/images/img2.png" alt="Природа 2" class="result__img">
+            </div>
+
+
+
+            <div class="result__card">
+
+              <div class="result__notification result__notification_tag result__notification_enabled">
+                <p class="result__notification-text result__notification-text_tag">Природа</p>
+              </div>
+              <div class="result__save-article-container">
+                <div class="result__notification result__notification_enabled">
+                  <p class="result__notification-text result__notification-text_remove">Убрать из сохраненных
+                  </p>
+                </div>
+
+                <div class="result__remove-article-btn"></div>
+              </div>
+
+
+
+
+
+              <img src="/src/images/img3.png" alt="Природа 3" class="result__img">
+              <p class="result__date">2 августа, 2019</p>
+              <h3 class="content-subtitle result__content-subtitle">Национальное достояние – парки</h3>
+              <p class="text result__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться
+                к природе.
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться
+                к природе.
+              </p>
+              <p class="result__source">Лента.ру</p>
+            </div>
+
+
+
+            <div class="result__card">
+              <img src="/src/images/img1.png" alt="Природа 1" class="result__img">
+              <p class="result__date">2 августа, 2019</p>
+              <h3 class="content-subtitle result__content-subtitle">Национальное достояние – парки</h3>
+              <p class="text result__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться
+                к природе.
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться
+                к природе.
+              </p>
+              <p class="result__source">Лента.ру</p>
+            </div>
+            <div class="result__card">
+              <img src="/src/images/img2.png" alt="Природа 2" class="result__img">
+            </div>
+            <div class="result__card">
+              <img src="/src/images/img3.png" alt="Природа 3" class="result__img">
+              <p class="result__date">2 августа, 2019</p>
+              <h3 class="content-subtitle result__content-subtitle">Национальное достояние – парки</h3>
+              <p class="text result__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться
+                к природе.
+              </p>
+              <p class="result__source">Лента.ру</p>
+            </div>
+
+
+          </div>
+          <button class="button result__btn">Показать еще</button>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__container">
+          <picture class="about__img">
+            <source srcset="/src/images/ab-1000.png" media="(-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi)">
+            <img src="/src/images/ab-500.png" class="about__img" alt="Александр Б.">
+          </picture>
+          <div class="about__text-container">
+            <h3 class="content-title about__content-title">Об авторе</h3>
+            <p class="text about__text">
+              Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими
+              технологиями разработки владеете.
+            </p>
+            <p class="text about__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут
+              научились, и чем можете помочь потенциальным заказчикам.</p>
+          </div>
+        </div>
+      </section>
+      <section class="footer">
+        <div class="footer__container">
+          <p class="footer__copyright">&copy; 2020 Supersite, Powered by News API</p>
+          <nav class="menu">
+            <ul class="nav footer__nav">
+              <li class="nav__item"><a href="./" class="link nav__link footer__link">Главная</a></li>
+              <li class="nav__item"><a href="https://praktikum.yandex.ru/" target="_blank"
+                  class="link nav__link footer__link">Яндекс.Практикум</a></li>
+              <li class="nav__item">
+                <div class="footer__icons-container">
+                  <a href="https://github.com/alex1056" target="_blank" class="link nav__link">
+                    <img src="/src/images/git-icon.svg" alt="Ссылка на GitHub" class="footer__icon">
+                  </a>
+                  <a href="https://www.facebook.com/" target="_blank" class="link nav__link">
+                    <img src="/src/images/fb-icon.svg" alt="Ссылка на Facebook" class="footer__icon">
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- <script src="<%= htmlWebpackPlugin.files.js %>" type="module"></script> -->
 </body>
 
 </html>

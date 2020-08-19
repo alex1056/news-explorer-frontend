@@ -1,0 +1,6 @@
+.about__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 51px;
+}

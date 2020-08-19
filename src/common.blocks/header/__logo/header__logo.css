@@ -1,0 +1,11 @@
+.header__logo {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+  margin: auto 0;
+  /* display: flex; */
+  text-align: center;
+}

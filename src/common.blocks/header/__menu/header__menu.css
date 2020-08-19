@@ -1,0 +1,11 @@
+.header__menu {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  display: flex;
+  padding: 0;
+}
+

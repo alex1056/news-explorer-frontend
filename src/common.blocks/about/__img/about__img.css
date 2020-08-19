@@ -1,0 +1,7 @@
+.about__img {
+  display: flex;
+  width: 464px;
+  height: 464px;
+  border-radius: 50%;
+  object-fit: cover;
+}
