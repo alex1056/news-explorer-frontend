@@ -1,0 +1,35 @@
+.intro-art__subtitle {
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+  width: 530px;
+  padding-bottom: 30px;
+}
+
+
+@media screen and (min-width: 1440px) {
+  .intro-art__subtitle {
+
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .intro-art__subtitle {
+    font-size: 30px;
+    line-height: 34px;
+    width: 336px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .intro-art__subtitle {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .intro-art__subtitle {
+
+  }
+}

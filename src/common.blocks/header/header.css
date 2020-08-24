@@ -3,18 +3,47 @@
 @import url(./__menu/header__menu.css);
 @import url(./__menu-item/header__menu-item.css);
 @import url(./__link/header__link.css);
+@import url(./_dark/header_dark.css);
+@import url(./__auth-btn/header__auth-btn.css);
+@import url(./__sandwich/header__sandwich.css);
+@import url(./__mobile-icon/header__mobile-icon.css);
+@import url(./__mobile-menu/header__mobile-menu.css);
+@import url(./__hi-res-menu/header__hi-res-menu.css);
+@import url(./__mobile-menu-back/header__mobile-menu-back.css);
+@import url(./__cross/header__cross.css);
+
+
 
 .header {
   width: 100%;
-  /* background-color: yellow; */
+  /* background-color: aqua; */
   height: 80px;
-  border-bottom: 1px solid rgb(196, 196, 196, 0.4);
-  /* border-bottom: 1px solid black; */
-  box-sizing: border-box;
+  /* border-bottom: 1px solid rgb(196, 196, 196, 0.4);
+  box-sizing: border-box; */
   display: flex;
   color: white;
   position: absolute;
   top: 0;
   left: 0;
-  /* z-index: 3; */
+}
+
+
+@media screen and (min-width: 1440px) {
+ .header{
+  border-bottom: 1px solid rgb(196, 196, 196, 0.4);
+  }
+}
+
+@media screen and (max-width: 1439px) {
+ .header{
+  height: 66px;
+   border-bottom: 1px solid rgb(196, 196, 196, 0.4);
+  }
+}
+
+@media screen and (max-width: 767px) {
+ .header{
+    height: 56px;
+    border-bottom: none;
+  }
 }

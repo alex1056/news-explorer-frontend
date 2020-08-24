@@ -1,0 +1,19 @@
+.auth-btn.header__auth-btn {
+  height: 48px;
+}
+
+
+ @media screen and (max-width: 1439px) {
+.auth-btn.header__auth-btn{
+   height: 40px;
+   padding-top: 7px;
+   }
+ }
+
+ @media screen and (max-width: 767px) {
+.auth-btn.header__auth-btn{
+  height: 56px;
+  width: 100%;
+  padding-top: 15px;
+   }
+ }

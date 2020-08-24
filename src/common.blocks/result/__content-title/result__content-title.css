@@ -7,3 +7,11 @@
   padding: 0;
   margin: 0;
 }
+
+
+@media screen and (max-width: 768px) {
+  .result__content-title {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}

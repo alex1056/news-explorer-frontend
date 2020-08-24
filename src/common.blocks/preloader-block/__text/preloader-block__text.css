@@ -1,0 +1,11 @@
+.preloader-block__text {
+  /* width: 356px; */
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #B6BCBF;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 24px;
+  color: #B6BCBF;
+}

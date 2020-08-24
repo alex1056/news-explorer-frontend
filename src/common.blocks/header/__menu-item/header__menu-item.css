@@ -1,7 +1,6 @@
 @import url(./_selected/header__menu-item_selected.css);
 .header__menu-item {
   padding: 0;
-  color: white;
   text-decoration: none;
   margin: auto 0;
   display: flex;
@@ -14,3 +13,22 @@
 .header__menu-item:last-child {
   margin-right: 0;
 }
+
+@media screen and (max-width: 1439px) {
+ .header__menu-item{
+   height: 66px;
+   margin-right: 16px;
+   }
+ }
+
+@media screen and (max-width: 767px) {
+ .header__menu-item{
+     height: 62px;
+     display: flex;
+     margin: 0;
+   }
+
+ .header__menu-item:nth-child(2n){
+   padding-bottom: 14px;
+  }
+ }

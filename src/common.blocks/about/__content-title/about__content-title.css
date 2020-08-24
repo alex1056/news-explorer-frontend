@@ -4,3 +4,42 @@
   color: #1A1B22;
   margin-bottom: 24px;
 }
+
+
+@media screen and (min-width: 1440px) {
+  .about__content-title {
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .about__content-title {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .about__content-title {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 16px;
+  }
+}
+
+/*
+@media screen and (max-width: 767px) {
+  .about__content-title {
+
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about__content-title {
+
+  }
+} */

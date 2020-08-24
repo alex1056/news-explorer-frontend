@@ -1,0 +1,39 @@
+@import url(./__tags/intro-art__tags.css);
+@import url(./__title/intro-art__title.css);
+@import url(./__subtitle/intro-art__subtitle.css);
+@import url(./__container/intro-art__container.css);
+@import url(./__text/intro-art__text.css);
+
+.intro-art {
+  width: 100%;
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 56px;
+  background: #FFF;
+}
+
+
+@media screen and (min-width: 1440px) {
+  .intro-art {
+
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .intro-art {
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .intro-art {
+    padding-top: 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .intro-art {
+
+  }
+}

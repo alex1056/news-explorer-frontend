@@ -1,9 +1,33 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
+@import url(../common.blocks/header/header.css);
+@import url(../library.blocks/auth-btn/auth-btn.css);
+@import url(../library.blocks/link/link.css);
+@import url(../common.blocks/search/search.css);
+@import url(../common.blocks/page/page.css);
+@import url(../library.blocks/content-title/content-title.css);
+@import url(../library.blocks/content-subtitle/content-subtitle.css);
+@import url(../library.blocks/text/text.css);
+@import url(../library.blocks/button/button.css);
+@import url(../common.blocks/result/result.css);
+@import url(../common.blocks/about/about.css);
+@import url(../common.blocks/footer/footer.css);
+@import url(../library.blocks/menu/menu.css);
+@import url(../library.blocks/nav/nav.css);
+
+@import url(../common.blocks/intro-art/intro-art.css);
+@import url(../library.blocks/card/card.css);
+@import url(../library.blocks/grid-cards/grid-cards.css);
+@import url(../common.blocks/cards/cards.css);
+@import url(../library.blocks/container/container.css);
+@import url(../library.blocks/popup/popup.css);
+
+
 
 h1 {
-  color: rgb(65, 117, 230);
+  /* color: rgb(66, 240, 57); */
 }
+
 body {
-  background-color: #28362a;
+  /* background-color: #25d33f; */
 }

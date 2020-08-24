@@ -1,0 +1,42 @@
+@import url(./__container/not-found__container.css);
+@import url(./__icon/not-found__icon.css);
+@import url(./__title/not-found__title.css);
+@import url(./__text/not-found__text.css);
+@import url(./_enabled/not-found_enabled.css);
+
+.not-found {
+  background: #F5F6F7;
+  width: 100%;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  display: none;
+}
+
+
+@media screen and (min-width: 1440px) {
+  .not-found {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .not-found {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .not-found {
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .not-found {
+    /* width: 100%;
+    max-width: 100%; */
+  }
+}

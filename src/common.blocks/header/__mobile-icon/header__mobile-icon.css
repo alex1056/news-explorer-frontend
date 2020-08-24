@@ -1,0 +1,28 @@
+.header__mobile-icon {
+  /* display: flex; */
+  display: none;
+  height: 100%;
+}
+
+
+@media screen and (min-width: 1440px) {
+  .header__mobile-icon{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1439px) {
+  .header__mobile-icon{
+    display: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+  .header__mobile-icon{
+      display: flex;
+
+    }
+  }
+
+
+

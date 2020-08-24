@@ -3,6 +3,9 @@
 @import url(./__form/search__form.css);
 @import url(./__input/search__input.css);
 @import url(./__button/search__button.css);
+@import url(./__content-title/search__content-title.css);
+@import url(./__title-subtitle-cont/search__title-subtitle-cont.css);
+
 
 .search {
   width: 100%;
@@ -13,3 +16,28 @@
   /* transform: translate(0, -80px); */
   z-index: 1;
 }
+
+
+@media screen and (min-width: 1440px) {
+ .search{
+
+   }
+ }
+
+ @media screen and (max-width: 1439px) {
+  .search {
+    height: 400px;
+   }
+ }
+
+ @media screen and (max-width: 767px) {
+ .search{
+  height: 536px;
+   }
+ }
+
+ @media screen and (max-width: 320px) {
+ .search{
+
+   }
+ }

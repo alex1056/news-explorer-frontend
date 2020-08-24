@@ -2,8 +2,43 @@
   display: flex;
   align-content: center;
   justify-content: space-between;
+  flex-direction: row;
   width: 1232px;
   height: 80px;
   margin: 0 auto;
   background-color: #fff;
+}
+
+
+@media screen and (min-width: 1440px) {
+  .footer__container {
+    /* max-width: 1232px;
+    margin: 0 auto; */
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .footer__container {
+      width: calc(100% - 80px);
+      max-width: 1232px;
+      height: 64px;
+      /* padding-right: 40px;
+      padding-left: 40px; */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__container {
+    width: calc(100% - 32px);
+    flex-direction: column-reverse;
+    margin-bottom: 22px;
+    height: 176px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer__container {
+    /* width: 100%;
+    max-width: 100%; */
+  }
 }

@@ -10,3 +10,33 @@
   margin-top: 64px;
   margin-bottom: 80px;
 }
+
+
+@media screen and (min-width: 1440px) {
+  .search__form {
+
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .search__form {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__form {
+    /* width: 100%;
+    max-width: 688px; */
+    margin-bottom: 32px;
+    position: static;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search__form {
+    /* width: 100%;
+    max-width: 100%; */
+  }
+}

@@ -1,0 +1,9 @@
+.card__notification.card__notification_enabled {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .card__notification.card__notification_enabled {
+    display: none;
+  }
+}

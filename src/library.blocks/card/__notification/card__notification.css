@@ -1,0 +1,43 @@
+@import url(./_enabled/card__notification_enabled.css);
+@import url(./_tag/card__notification_tag.css);
+.card__notification {
+  height: 40px;
+  background: #FFF;
+  box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 5px;
+  display: none;
+  align-content: center;
+}
+
+
+@media screen and (min-width: 1440px) {
+  .card__notification {
+    /* width: 100%;
+    max-width: 1232px; */
+    /* max-width: none; */
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .card__notification {
+    max-width: 140px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card__notification {
+    /* width: 100%;
+    max-width: 688px; */
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card__notification {
+    /* width: 100%;
+    max-width: 100%; */
+  }
+}

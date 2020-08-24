@@ -1,0 +1,22 @@
+@import url(./__content-subtitle/card__content-subtitle.css);
+@import url(./__date/card__date.css);
+@import url(./__img/card__img.css);
+@import url(./__notification-text/card__notification-text.css);
+@import url(./__notification/card__notification.css);
+@import url(./__remove-article-btn/card__remove-article-btn.css);
+@import url(./__save-article-btn/card__save-article-btn.css);
+@import url(./__save-article-container/card__save-article-container.css);
+@import url(./__source/result__source.css);
+@import url(./__text/card__text.css);
+@import url(./__text-container/card__text-container.css);
+@import url(./__tag/card__tag.css);
+
+.card {
+/* background-color: #fff; */
+background-color: salmon;
+display: flex;
+flex-direction: column;
+border-radius: 15px 15px 15px 15px;
+position: relative;
+/* height: 576px; */
+}

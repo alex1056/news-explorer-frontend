@@ -10,16 +10,37 @@
   padding-left: 24px;
   padding-top: 21px;
   padding-bottom: 21px;
-  /* position: absolute;
-  top: 0;
-  left: 0; */
 }
 .search__input::placeholder {
   color: #B6BCBF;
 }
 
 .search__input:focus {
-  outline: none;
-  /* border: 1px solid red; */
+  outline: 1px solid rgba(209, 210, 214, 0);
   color: #1A1B22;;
  }
+
+
+@media screen and (min-width: 1440px) {
+  .search__input {
+
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .search__input {
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__input {
+
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search__input {
+
+  }
+}

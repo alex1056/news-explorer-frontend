@@ -1,3 +1,4 @@
+@import url('./_bold/text_bold.css');
 .text {
   font-family: 'Roboto';
   font-style: normal;
@@ -5,7 +6,7 @@
   font-size: 18px;
   line-height: 24px;
   text-align: left;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
   margin: 0;
   padding: 0;
 }

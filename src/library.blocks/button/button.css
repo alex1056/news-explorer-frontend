@@ -1,3 +1,4 @@
+@import url(./_disabled/button__disabled.css);
 .button {
   width: 168px;
   height: 64px;
@@ -13,19 +14,13 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-
-  /* opacity: 1; */
-    transition: background .2s;
-
+  transition: background .2s;
 }
 
 .button:hover {
   background:#347EFF;
   outline: none;
-
-  /* opacity: .4; */
   transition: background .2s;
-
 }
 
 .button:focus {

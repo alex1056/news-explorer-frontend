@@ -1,0 +1,23 @@
+.footer__nav-item {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 767px) {
+  .footer__nav-item {
+    text-align: left;
+  }
+
+  .footer__nav-item:first-child {
+  padding-bottom: 25px;
+   }
+
+
+.footer__nav-item:nth-child(3n) {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 25px;
+
+
+ }
+}

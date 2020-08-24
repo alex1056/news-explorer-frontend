@@ -9,3 +9,18 @@
   padding: 0;
 }
 
+
+ @media screen and (max-width: 767px) {
+ .header__menu{
+    padding-top: 12px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc (100% - 32px);
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 24px;
+   }
+ }
+
+
+

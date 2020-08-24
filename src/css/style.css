@@ -14,9 +14,18 @@
 @import url(../common.blocks/footer/footer.css);
 @import url(../library.blocks/menu/menu.css);
 @import url(../library.blocks/nav/nav.css);
+@import url(../library.blocks/card/card.css);
+@import url(../library.blocks/grid-cards/grid-cards.css);
+@import url(../library.blocks/container/container.css);
+@import url(../common.blocks/not-found/not-found.css);
+@import url(../common.blocks/preloader-block/preloader-block.css);
+@import url(../library.blocks/circle-preloader/circle-preloader.css);
+@import url(../library.blocks/popup/popup.css);
+@import url(../library.blocks/form/form.css);
+
 
 h1 {
-  color: rgb(66, 240, 57);
+  /* color: rgb(66, 240, 57); */
 }
 
 body {

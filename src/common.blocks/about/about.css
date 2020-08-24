@@ -3,6 +3,7 @@
 @import url(./__text-container/about__text-container.css);
 @import url(./__content-title/about__content-title.css);
 @import url(./__text/about__text.css);
+@import url(./__img-container/about__img-container.css);
 
 .about {
   width: 100%;
@@ -11,3 +12,31 @@
   padding-bottom: 80px;
   background: #FFF;
 }
+
+@media screen and (max-width: 1439px) {
+  .about {
+    padding-top: 60px;
+    padding-bottom: 61px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .about {
+    padding-top: 40px;
+    padding-bottom: 61px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    padding-top: 32px;
+    padding-bottom: 80px;
+  }
+}
+/*
+ @media screen and (max-width: 320px) {
+  .about {
+    width: 100%;
+    max-width: 100%;
+  }
+}  */

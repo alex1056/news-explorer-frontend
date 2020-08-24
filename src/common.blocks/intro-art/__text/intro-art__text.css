@@ -1,0 +1,32 @@
+.intro-art__text {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+
+@media screen and (min-width: 1440px) {
+  .intro-art__text {
+
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .intro-art__text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .intro-art__text {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .intro-art__text {
+
+  }
+}
