@@ -1,16 +1,6 @@
 .card__content-subtitle {
   color: #1A1B22;
   padding-bottom: 16px;
-  /* padding-left: 24px; */
-  /* padding-right: 24px; */
-}
-
-
-@media screen and (min-width: 1440px) {
-  .card__content-subtitle {
-    /* width: 100%;
-    max-width: 1232px; */
-  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -18,21 +8,13 @@
     font-size: 22px;
     line-height: 24px;
     padding-bottom: 10px;
-    /* padding-left: 16px; */
-    /* padding-right: 16px; */
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .card__content-subtitle {
-    /* width: 100%;
-    max-width: 688px; */
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card__content-subtitle {
-    /* width: 100%;
-    max-width: 100%; */
+    font-size: 21px;
+    line-height: 24px;
+    padding-bottom: 10px;
   }
 }

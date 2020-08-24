@@ -20,27 +20,8 @@
   color: #1A1B22;;
  }
 
-
-@media screen and (min-width: 1440px) {
-  .search__input {
-
-  }
-}
-
 @media screen and (max-width: 1439px) {
   .search__input {
     height: 56px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .search__input {
-
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .search__input {
-
   }
 }

@@ -13,31 +13,17 @@
   background: url('../../images/image-search.png');
   background-size: cover;
   display: flex;
-  /* transform: translate(0, -80px); */
   z-index: 1;
 }
 
-
-@media screen and (min-width: 1440px) {
- .search{
-
-   }
- }
-
- @media screen and (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
   .search {
     height: 400px;
    }
  }
 
- @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
  .search{
   height: 536px;
-   }
- }
-
- @media screen and (max-width: 320px) {
- .search{
-
    }
  }

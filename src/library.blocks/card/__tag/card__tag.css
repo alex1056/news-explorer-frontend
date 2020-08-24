@@ -21,14 +21,12 @@
   .card__tag {
     left: 16px;
     top: 16px;
-    /* max-width: none; */
   }
 }
 @media screen and (max-width: 1280px) {
   .card__tag {
     left: 8px;
     top: 8px;
-    /* max-width: none; */
   }
 }
 
@@ -43,12 +41,5 @@
     left: 16px;
     top: 16px;
     max-width: none;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card__tag {
-    /* width: 100%;
-    max-width: 100%; */
   }
 }

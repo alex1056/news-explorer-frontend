@@ -12,11 +12,35 @@
 @import url(./__tag/card__tag.css);
 
 .card {
-/* background-color: #fff; */
-background-color: salmon;
+/* background-color: salmon; */
+background-color: white;
 display: flex;
 flex-direction: column;
 border-radius: 15px 15px 15px 15px;
 position: relative;
-/* height: 576px; */
+height: 576px;
+}
+
+/* @media screen and (max-width: 1439px) {
+  .card {
+    height: 420px;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    height: 440px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card {
+    height: 440px;
+  }
 }

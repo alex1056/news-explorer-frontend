@@ -5,13 +5,6 @@
   z-index: 1;
 }
 
-
-@media screen and (min-width: 1440px) {
- .button.search__button{
-
-  }
-}
-
 @media screen and (max-width: 1439px) {
   .button.search__button {
     height: 56px;
@@ -23,11 +16,5 @@
   position: static;
   margin-top: 16px;
   width: 100%;
-  }
-}
-
-@media screen and (max-width: 320px) {
- .button.search__button{
-
   }
 }

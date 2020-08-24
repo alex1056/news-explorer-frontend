@@ -4,4 +4,19 @@
   top: -40px;
   right: -45px;
   cursor: pointer;
+  display: block;
+}
+
+/* @media screen and (max-width: 540px) {
+  .popup__close {
+    width: 24px;
+    top: -40px;
+    right: 20px;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .popup__close {
+    display: none;
+  }
 }

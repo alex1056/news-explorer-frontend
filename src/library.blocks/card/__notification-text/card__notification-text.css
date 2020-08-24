@@ -13,10 +13,3 @@
   text-align: center;
   color: #000000;
 }
-
-
-@media screen and (max-width: 767px) {
-  .card__notification-text {
-    /* display: none; */
-  }
-}

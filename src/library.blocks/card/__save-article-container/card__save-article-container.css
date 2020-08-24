@@ -8,15 +8,6 @@
   justify-content: flex-end;
 }
 
-
-@media screen and (min-width: 1440px) {
-  .card__save-article-container {
-    /* width: 100%;
-    max-width: 1232px; */
-  }
-}
-
-
 @media screen and (max-width: 1439px) {
   .card__save-article-container {
     right: 16px;
@@ -37,11 +28,5 @@
   .card__save-article-container {
     right: 16px;
     top: 16px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card__save-article-container {
-
   }
 }

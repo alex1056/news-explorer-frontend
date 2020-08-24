@@ -26,10 +26,3 @@
     grid-template-rows: 55px auto 1fr 35px;
   }
 }
-
-@media screen and (max-width: 320px) {
-  .card__text-container {
-    /* width: 100%;
-    max-width: 100%; */
-  }
-}

@@ -1,6 +1,9 @@
 .card__save-article-btn.card__save-article-btn_saved {
   background: url('../../../../images/flag-icon-saved.svg');
- background-size: cover;
-  /*  width: 40px;
-  height: 40px; */
+  background-size: cover;
+}
+
+.card__save-article-btn.card__save-article-btn_saved:hover {
+  background: url('../../../../images/flag-icon-saved.svg');
+  transition: background .2s;
 }

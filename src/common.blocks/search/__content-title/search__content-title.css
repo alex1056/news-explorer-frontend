@@ -10,7 +10,6 @@
   margin: 0;
 }
 
-
 @media screen and (max-width: 1439px) {
   .content-title.search__content-title {
     font-size: 36px;
@@ -18,11 +17,3 @@
     max-width: 385px;
   }
 }
-
-@media screen and (max-width: 767px) {
-  .content-title.search__content-title {
-    /* width: 100%;
-    max-width: 688px; */
-  }
-}
-

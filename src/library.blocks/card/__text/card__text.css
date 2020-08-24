@@ -6,38 +6,17 @@
   line-height: 22px;
   color: #1A1B22;
   padding-bottom: 18px;
-  /* padding-left: 24px; */
-  padding-right: 24px;
 }
 
 
 @media screen and (min-width: 1440px) {
   .card__text {
     padding-bottom: 18px;
-    /* padding-left: 24px; */
-    /* padding-right: 24px; */
   }
 }
 
 @media screen and (max-width: 1439px) {
   .card__text {
     padding-bottom: 12px;
-    /* padding-left: 16px;
-    padding-right: 16px; */
-  }
-}
-
-
-@media screen and (max-width: 767px) {
-  .card__text {
-    /* width: 100%;
-    max-width: 688px; */
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card__text {
-    /* width: 100%;
-    max-width: 100%; */
   }
 }

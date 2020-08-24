@@ -1,38 +1,4 @@
 .cards__grid-cards {
   width: 100%;
-  /* margin-bottom: 62px; */
-  /* padding-bottom: 62px; */
-  /* margin-top: 62px; */
-
-  background-color: yellow;
-}
-
-
-@media screen and (min-width: 1440px) {
-  .cards__grid-cards {
-
-
-  }
-}
-
-@media screen and (max-width: 1439px) {
-  .cards__grid-cards {
-    /* margin-bottom: 32px; */
-    /* padding-bottom: 32px; */
-    /* margin-top: 32px; */
-
-
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .cards__grid-cards {
-
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .cards__grid-cards {
-
-  }
+  /* background-color: yellow; */
 }

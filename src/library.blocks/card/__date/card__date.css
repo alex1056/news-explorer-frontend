@@ -9,15 +9,6 @@
   margin: 0;
   padding-top: 20px;
   padding-bottom: 12px;
-  /* padding-left: 24px; */
-}
-
-
-@media screen and (min-width: 1440px) {
-  .card__date {
-    /* width: 100%;
-    max-width: 1232px; */
-  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -26,21 +17,5 @@
     line-height: 24px;
     padding-top: 16px;
     padding-bottom: 12px;
-    /* padding-left: 16px; */
-    /* padding-right: 16px; */
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .card__date {
-    /* width: 100%;
-    max-width: 688px; */
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card__date {
-    /* width: 100%;
-    max-width: 100%; */
   }
 }

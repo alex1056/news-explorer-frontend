@@ -5,29 +5,8 @@
  color: white;
 }
 
-
-@media screen and (min-width: 1440px) {
-  .text.search__text {
-
-  }
-}
-
 @media screen and (max-width: 1439px) {
   .text.search__text {
     padding-top: 16px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .text.search__text {
-    /* width: 100%;
-    max-width: 688px; */
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .text.search__text {
-    /* width: 100%;
-    max-width: 100%; */
   }
 }

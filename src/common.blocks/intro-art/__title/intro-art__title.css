@@ -10,13 +10,6 @@
   padding-bottom: 28px;
 }
 
-
-@media screen and (min-width: 1440px) {
-  .intro-art__title {
-
-  }
-}
-
 @media screen and (max-width: 1439px) {
   .intro-art__title {
     padding-bottom: 16px;
@@ -27,11 +20,5 @@
   .intro-art__title {
     font-size: 12px;
     line-height: 24px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .intro-art__title {
-
   }
 }

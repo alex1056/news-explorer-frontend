@@ -5,15 +5,6 @@
   top: 24px;
 }
 
-
-@media screen and (min-width: 1440px) {
-  .card__notification.card__notification_tag {
-    /* width: 100%;
-    max-width: 1232px; */
-  }
-}
-
-
 @media screen and (max-width: 1439px) {
   .card__notification.card__notification_tag {
     left: 16px;
@@ -22,25 +13,10 @@
   }
 }
 
-
 @media screen and (max-width: 1280px) {
   .card__notification.card__notification_tag {
     left: 8px;
     top: 8px;
     /* max-width: none; */
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .card__notification.card__notification_tag {
-    /* width: 100%;
-    max-width: 688px; */
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card__notification.card__notification_tag {
-    /* width: 100%;
-    max-width: 100%; */
   }
 }

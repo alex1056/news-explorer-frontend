@@ -33,10 +33,3 @@
     padding-top: 32px;
   }
 }
-
-@media screen and (max-width: 320px) {
-  .not-found {
-    /* width: 100%;
-    max-width: 100%; */
-  }
-}

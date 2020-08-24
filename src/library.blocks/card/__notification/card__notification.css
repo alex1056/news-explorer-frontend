@@ -12,15 +12,6 @@
   align-content: center;
 }
 
-
-@media screen and (min-width: 1440px) {
-  .card__notification {
-    /* width: 100%;
-    max-width: 1232px; */
-    /* max-width: none; */
-  }
-}
-
 @media screen and (max-width: 810px) {
   .card__notification {
     max-width: 140px;
@@ -29,15 +20,6 @@
 
 @media screen and (max-width: 767px) {
   .card__notification {
-    /* width: 100%;
-    max-width: 688px; */
     max-width: none;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card__notification {
-    /* width: 100%;
-    max-width: 100%; */
   }
 }

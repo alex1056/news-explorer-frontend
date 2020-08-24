@@ -6,13 +6,6 @@
   padding-bottom: 30px;
 }
 
-
-@media screen and (min-width: 1440px) {
-  .intro-art__subtitle {
-
-  }
-}
-
 @media screen and (max-width: 1439px) {
   .intro-art__subtitle {
     font-size: 30px;
@@ -25,11 +18,5 @@
 @media screen and (max-width: 767px) {
   .intro-art__subtitle {
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .intro-art__subtitle {
-
   }
 }

@@ -35,7 +35,9 @@
           </ul>
         </nav>
       </div>
-      <div class="header__mobile-menu header__mobile-menu_enabled">
+
+      <!-- <div class="header__mobile-menu header__mobile-menu_enabled"> -->
+      <div class="header__mobile-menu">
 
         <nav class="header__mobile-menu-back">
 
@@ -61,6 +63,7 @@
           </ul>
         </nav>
       </div>
+
     </header>
 
     <main>
@@ -92,7 +95,7 @@
                 required />
               <span class="form__err-message">Неправильный формат email</span>
             </fieldset>
-            <fieldset class="form__fieldset">
+            <fieldset class="form__fieldset form__fieldset_small-margin">
               <label for="passwordField" class="form__label">Пароль</label>
               <input type="password" name="passwordField" id="password" class="form__input" placeholder="Введите пароль"
                 required />
@@ -107,13 +110,13 @@
             <a href="#" class="link popup__link">Зарегистрироваться</a>
           </div>
         </div>
-      </div>
-      -->
+      </div> -->
+
       <!-- popup end -->
 
       <!-- popup form: 'Регистрация' begin -->
-      <!--
-      <div id="popupRegister" class="popup popup_is-opened">
+
+      <!-- <div id="popupRegister" class="popup popup_is-opened">
         <div class="popup__content">
           <img src="../images/close.svg" alt="" class="popup__close" />
           <h3 class="popup__title">Регистрация</h3>
@@ -131,7 +134,7 @@
               <span class="form__err-message"> </span>
             </fieldset>
 
-            <fieldset class="form__fieldset">
+            <fieldset class="form__fieldset form__fieldset_small-margin">
               <label for="nameField" class="form__label">Имя</label>
               <input type="text" name="nameField" id="name" class="form__input" placeholder="Введите своё имя"
                 required />
@@ -148,8 +151,8 @@
             <a href="#" class="link popup__link">Войти</a>
           </div>
         </div>
-      </div>
-      -->
+      </div> -->
+
       <!-- popup end -->
 
       <!-- popup form: 'Успешная регистрация' begin -->
@@ -243,19 +246,18 @@
               <img src="/src/images/img3.png" alt="Природа 3" class="card__img">
               <div class="card__text-container">
                 <p class="card__date">2 августа, 2019</p>
-                <h3 class="content-subtitle card__content-subtitle">«Первозданная тайга»: новый фотопроект Игоря
-                  Шпиленка
-                </h3>
-                <p class="text card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
-                  необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
-                </p>
-                <p class="card__source">РИА</p>
+                <h3 class="content-subtitle card__content-subtitle">Национальное достояние – парки</h3>
+                <p class="text card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                  складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
+                  приобщиться
+                  к природе.</p>
+                <p class="card__source">Лента.ру</p>
               </div>
             </article>
 
 
 
-            <article class="card">
+            <!-- <article class="card">
               <img src="/src/images/img1.png" alt="Природа 1" class="card__img">
               <div class="card__text-container">
                 <p class="card__date">2 августа, 2019</p>
@@ -289,7 +291,7 @@
                 </p>
                 <p class="card__source">Лента.ру</p>
               </div>
-            </article>
+            </article> -->
           </div>
           <button class="button result__btn">Показать еще</button>
         </div>
@@ -338,7 +340,8 @@
 
     </main>
   </div>
-
+  <!-- <script src="../js/popup.js"></script> -->
+  <script src="../js/index.js" type="module"></script>
   <!-- <script src="<%= htmlWebpackPlugin.files.js %>" type="module"></script> -->
 </body>
 

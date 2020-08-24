@@ -1,23 +1,13 @@
-
 @import url(./__grid-cards/result__grid-cards.css);
 @import url(./__btn/result__btn.css);
 @import url(./__container/result__container.css);
 @import url(./__content-title/result__content-title.css);
-
 
 .result {
   width: 100%;
   display: flex;
   background: #F5F6F7;
   padding-top: 80px;
-  /* padding-bottom: 80px; */
-}
-
-
-@media screen and (min-width: 1440px) {
-  .result {
-
-  }
 }
 
 @media screen and (max-width: 1439px) {
@@ -32,9 +22,3 @@
   }
 }
 
-@media screen and (max-width: 320px) {
-  .result {
-    /* width: 100%;
-    max-width: 100%; */
-  }
-}

@@ -12,7 +12,7 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'import/no-dynamic-require': 'off',
-    'no-underscore-dangle': [2, { allow: ['foo_', '_id'] }],
+    'no-underscore-dangle': [2, { allow: ['foo_', '_id', '_template', '_popup', '_createNode', '_getTemplate', '_setEventListeners'] }],
     'func-names': ['error', 'never', { generators: 'as-needed' }],
     'import/no-extraneous-dependencies': [
       'error',
@@ -21,5 +21,17 @@ module.exports = {
       },
     ],
     'global-require': 0,
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+        vue: 'never',
+      },
+    ],
   },
 };

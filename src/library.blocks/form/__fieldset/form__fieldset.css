@@ -1,5 +1,6 @@
 @import url(./_type/_one/form__fieldset_type_one.css);
 @import url(./_type/_two/form__fieldset_type_two.css);
+@import url(./_small-margin/form__fieldset_small-margin.css);
 
 .form__fieldset {
 width: 100%;
