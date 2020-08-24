@@ -58,7 +58,7 @@ export default class Popup {
           <fieldset class="form__fieldset form__fieldset_small-margin">
             <label for="passwordField" class="form__label">Пароль</label>
             <input type="password" name="passwordField" id="password" class="form__input" placeholder="Введите пароль"
-              required />
+              required minlength="8"/>
             <span class="form__err-message"> </span>
           </fieldset>
           <button disabled type="submit" id="submit" class="button form__button button__disabled">
@@ -93,7 +93,7 @@ export default class Popup {
           <fieldset class="form__fieldset form__fieldset_small-margin">
             <label for="nameField" class="form__label">Имя</label>
             <input type="text" name="nameField" id="name" class="form__input" placeholder="Введите своё имя"
-              required />
+              required minlength="2"/>
             <span class="form__err-message"> </span>
           </fieldset>
 

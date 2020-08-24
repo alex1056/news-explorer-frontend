@@ -25,12 +25,7 @@ module.exports = {
       'error',
       'ignorePackages',
       {
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-        vue: 'never',
+        js: 'ignorePackages',
       },
     ],
   },
