@@ -1,4 +1,4 @@
-// import '../css/articles.css';
+import '../css/articles.css';
 
 (function () {
   const cropElement = document.querySelectorAll('.card__text');

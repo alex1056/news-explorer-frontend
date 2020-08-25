@@ -1,6 +1,6 @@
 @import url('./_bold/text_bold.css');
 .text {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Verdana, 'Geneva CY', 'San-serif';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

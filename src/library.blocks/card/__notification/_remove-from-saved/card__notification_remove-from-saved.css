@@ -1,0 +1,9 @@
+.card__notification.card__notification_enabled.card__notification_remove-from-saved {
+  display: flex;
+}
+
+@media screen and (max-width: 1010px) {
+  .card__notification.card__notification_enabled.card__notification_remove-from-saved {
+    display: none;
+  }
+}

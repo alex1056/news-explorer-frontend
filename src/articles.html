@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Articles</title>
-  <!-- <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>" /> -->
-  <link rel="stylesheet" href="../css/articles.css" />
-  <link rel="shortcut icon" type="image/png" href="/src/images/favicon.png" />
+  <title>NewsExplorer сохраненные статьи</title>
+  <meta name="author" content="Александр Бесов" />
+  <meta name="description" content="Страница содержит сохраненные статьи пользователя">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>" />
+  <link rel="shortcut icon" type="image/png" href="<%=require('./images/favicon.png').default%>" />
 </head>
 
 <body>
@@ -37,6 +38,13 @@
           </ul>
         </nav>
       </div>
+
+      <!-- Комментарий для Ревью -->
+      <!--
+    Отображение мобильного меню отключено, чтобы не ставить eventListeners
+    корректность работы можно проверить на странице index.html
+ -->
+
       <!--
       <div class="header__mobile-menu header__mobile-menu_enabled">
 
@@ -101,7 +109,7 @@
                 <div class="card__remove-article-btn"></div>
               </div>
 
-              <img src="/src/images/img4.png" alt="Природа 1" class="card__img">
+              <img src="<%=require('./images/img4.png').default%>" alt="Природа 1" class="card__img">
               <div class="card__text-container">
                 <p class="card__date">2 августа, 2019</p>
                 <h3 class="content-subtitle card__content-subtitle">Национальное достояние – парки</h3>
@@ -133,7 +141,7 @@
               </div>
 
 
-              <img src="/src/images/img5.png" alt="Природа 2" class="card__img">
+              <img src="<%=require('./images/img5.png').default%>" alt="Природа 2" class="card__img">
               <div class="card__text-container">
                 <p class="card__date">2 августа, 2019</p>
                 <h3 class="content-subtitle card__content-subtitle">Лесные огоньки: история одной фотографии</h3>
@@ -149,14 +157,14 @@
                 <p class="card__notification-text card__notification-text_tag">Природа</p>
               </div>
               <div class="card__save-article-container">
-                <div class="card__notification card__notification_enabled">
+                <div class="card__notification card__notification_enabled card__notification_remove-from-saved">
                   <p class="card__notification-text card__notification-text_remove">Убрать из сохраненных
                   </p>
                 </div>
                 <div class="card__remove-article-btn"></div>
               </div>
 
-              <img src="/src/images/img6.png" alt="Природа 3" class="card__img">
+              <img src="<%=require('./images/img6.png').default%>" alt="Природа 3" class="card__img">
               <div class="card__text-container">
                 <p class="card__date">2 августа, 2019</p>
                 <h3 class="content-subtitle card__content-subtitle">Национальное достояние – парки</h3>
@@ -180,7 +188,7 @@
                 <div class="card__remove-article-btn"></div>
               </div>
 
-              <img src="/src/images/img4.png" alt="Природа 1" class="card__img">
+              <img src="<%=require('./images/img4.png').default%>" alt="Природа 1" class="card__img">
               <div class="card__text-container">
                 <p class="card__date">2 августа, 2019</p>
                 <h3 class="content-subtitle card__content-subtitle">Национальное достояние – парки</h3>
@@ -212,7 +220,7 @@
               </div>
 
 
-              <img src="/src/images/img5.png" alt="Природа 2" class="card__img">
+              <img src="<%=require('./images/img5.png').default%>" alt="Природа 2" class="card__img">
               <div class="card__text-container">
                 <p class="card__date">2 августа, 2019</p>
                 <h3 class="content-subtitle card__content-subtitle">Лесные огоньки: история одной фотографии</h3>
@@ -236,21 +244,20 @@
             <li class="nav__item footer__nav-item">
               <div class="footer__icons-container">
                 <a href="https://github.com/alex1056" target="_blank" class="link nav__link">
-                  <img src="/src/images/git-icon.svg" alt="Ссылка на GitHub" class="footer__icon">
+                  <img src="<%=require('./images/git-icon.svg').default%>" alt="Ссылка на GitHub" class="footer__icon">
                 </a>
                 <a href="https://www.facebook.com/" target="_blank" class="link nav__link">
-                  <img src="/src/images/fb-icon.svg" alt="Ссылка на Facebook" class="footer__icon">
+                  <img src="<%=require('./images/fb-icon.svg').default%>" alt="Ссылка на Facebook" class="footer__icon">
                 </a>
               </div>
             </li>
           </ul>
         </div>
       </section>
-
     </main>
   </div>
-  <!-- <script src="<%= htmlWebpackPlugin.files.js %>" type="module"></script> -->
-  <script src="../js/articles.js" type="module"></script>
+  <script src="<%= htmlWebpackPlugin.files.js %>" type="module"></script>
+  <!-- <script src="../js/articles.js" type="module"></script> -->
 </body>
 
 </html>

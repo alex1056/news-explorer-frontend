@@ -1,6 +1,6 @@
 # Дипломный проект. Front-end.
 
-Ссылка на gh-pages [https://api.diploma-2020.ru/](https://api.diploma-2020.ru/)
+Ссылка на gh-pages [https://alex1056.github.io/news-explorer-frontend/](https://alex1056.github.io/news-explorer-frontend/)
 
 
 # В текущей версии реализовано:

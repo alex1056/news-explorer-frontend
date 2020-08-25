@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <!-- <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>" /> -->
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="shortcut icon" type="image/png" href="/src/images/favicon.png" />
+  <title>NewsExplorer главная страница</title>
+  <meta name="author" content="Александр Бесов" />
+  <meta name="description" content="Поиск новостей по тэгам">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>" />
+  <link rel="shortcut icon" type="image/png" href="<%=require('./images/favicon.png').default%>" />
 </head>
 
 <body>
@@ -82,6 +83,11 @@
           </form>
         </div>
       </section>
+      <!-- Комментарий для Ревью -->
+      <!-- ниже закомментированы 3 формы, если убрать "комментирование кода"
+формы будут показываться в открытом виде для проверки.
+Открыть/скрыть можно модификатором popup_is-opened
+-->
 
       <!-- popup form: 'Вход' begin -->
       <!--
@@ -172,6 +178,13 @@
 
 
 
+      <!-- Комментарий для Ревью -->
+      <!-- ниже закомментированы блоки Not found и Прелоадер.
+После раскомментирования блоки будут видимымы. Открыть/скрыть можно модификатором not-found_enabled и preloader-block_enabled
+-->
+
+
+
       <!-- <section class="not-found not-found_enabled">
         <div class="not-found__container">
           <img src="/src/images/not-found-icon.svg" alt="Изображение: Ничего не найдено" class="not-found__icon">
@@ -201,7 +214,7 @@
                 <div class="card__save-article-btn"></div>
               </div>
 
-              <img src="/src/images/img1.png" alt="Природа 1" class="card__img">
+              <img src="<%=require('./images/img1.png').default%>" alt="Природа 1" class="card__img">
               <div class="card__text-container">
                 <p class="card__date">2 августа, 2019</p>
                 <h3 class="content-subtitle card__content-subtitle">Национальное достояние – парки</h3>
@@ -220,7 +233,7 @@
                 <div class="card__save-article-btn card__save-article-btn_saved"></div>
               </div>
 
-              <img src="/src/images/img2.png" alt="Природа 2" class="card__img">
+              <img src="<%=require('./images/img2.png').default%>" alt="Природа 2" class="card__img">
               <div class="card__text-container">
                 <p class="card__date">2 августа, 2019</p>
                 <h3 class="content-subtitle card__content-subtitle">Лесные огоньки: история одной фотографии</h3>
@@ -244,7 +257,7 @@
                 <div class="card__remove-article-btn"></div>
               </div>
 
-              <img src="/src/images/img3.png" alt="Природа 3" class="card__img">
+              <img src="<%=require('./images/img3.png').default%>" alt="Природа 3" class="card__img">
               <div class="card__text-container">
                 <p class="card__date">2 августа, 2019</p>
                 <h3 class="content-subtitle card__content-subtitle">Национальное достояние – парки</h3>
@@ -255,44 +268,6 @@
                 <p class="card__source">Лента.ру</p>
               </div>
             </article>
-
-
-
-            <!-- <article class="card">
-              <img src="/src/images/img1.png" alt="Природа 1" class="card__img">
-              <div class="card__text-container">
-                <p class="card__date">2 августа, 2019</p>
-                <h3 class="content-subtitle card__content-subtitle">Национальное достояние – парки</h3>
-                <p class="text card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                  складываться система национальных парков – охраняемых территорий, где и сегодня каждый может
-                  приобщиться
-                  к природе.
-
-                </p>
-                <p class="card__source">Лента.ру</p>
-              </div>
-            </article>
-            <article class="card">
-              <img src="/src/images/img2.png" alt="Природа 2" class="card__img">
-              <div class="card__text-container">
-                <p class="card__date">2 августа, 2019</p>
-                <h3 class="content-subtitle card__content-subtitle">Национальное достояние – парки</h3>
-                <p class="text card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                  складываться система национальных парков – охраняемых территорий.
-                </p>
-                <p class="card__source">Лента.ру</p>
-              </div>
-            </article>
-            <article class="card">
-              <img src="/src/images/img3.png" alt="Природа 3" class="card__img">
-              <div class="card__text-container">
-                <p class="card__date">2 августа, 2019</p>
-                <h3 class="content-subtitle card__content-subtitle">Национальное достояние – парки</h3>
-                <p class="text card__text">Нечего сказать.
-                </p>
-                <p class="card__source">Лента.ру</p>
-              </div>
-            </article> -->
           </div>
           <button class="button result__btn">Показать еще</button>
         </div>
@@ -302,9 +277,10 @@
         <div class="about__container">
           <div class="about__img-container">
             <picture class="about__img">
-              <source srcset="/src/images/ab-1000.png" media="(-webkit-min-device-pixel-ratio: 2),
+              <source srcset="<%=require('./images/ab-1000.png').default%>" media="(-webkit-min-device-pixel-ratio: 2),
                 (min-resolution: 192dpi)">
-              <img src="/src/images/ab-500.png" class="about__img" alt="Александр Б.">
+
+              <img src="<%=require('./images/ab-500.png').default%>" class="about__img" alt="Александр Б.">
             </picture>
           </div>
           <div class="about__text-container">
@@ -328,10 +304,10 @@
             <li class="nav__item footer__nav-item">
               <div class="footer__icons-container">
                 <a href="https://github.com/alex1056" target="_blank" class="link nav__link">
-                  <img src="/src/images/git-icon.svg" alt="Ссылка на GitHub" class="footer__icon">
+                  <img src="<%=require('./images/git-icon.svg').default%>" alt="Ссылка на GitHub" class="footer__icon">
                 </a>
                 <a href="https://www.facebook.com/" target="_blank" class="link nav__link">
-                  <img src="/src/images/fb-icon.svg" alt="Ссылка на Facebook" class="footer__icon">
+                  <img src="<%=require('./images/fb-icon.svg').default%>" alt="Ссылка на Facebook" class="footer__icon">
                 </a>
               </div>
             </li>
@@ -341,9 +317,7 @@
 
     </main>
   </div>
-  <!-- <script src="../js/popup.js"></script> -->
-  <script src="../js/index.js" type="module"></script>
-  <!-- <script src="<%= htmlWebpackPlugin.files.js %>" type="module"></script> -->
+  <script src="<%= htmlWebpackPlugin.files.js %>" type="module"></script>
 </body>
 
 </html>

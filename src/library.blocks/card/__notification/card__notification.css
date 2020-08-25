@@ -1,5 +1,6 @@
 @import url(./_enabled/card__notification_enabled.css);
 @import url(./_tag/card__notification_tag.css);
+@import url(./_remove-from-saved/card__notification_remove-from-saved.css);
 .card__notification {
   height: 40px;
   background: #FFF;

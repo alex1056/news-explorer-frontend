@@ -19,7 +19,7 @@
   justify-content: center;
   display: none;
   z-index: 2;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Verdana, 'Geneva CY', 'San-serif';
   font-style: normal;
   color: #1A1B22;
 }

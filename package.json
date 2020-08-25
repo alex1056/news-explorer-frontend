@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "Дипломная работа, фронтенд",
   "main": "index.js",
-  "homepage": "https://github.com/alex1056/news-explorer-frontend",
+  "homepage": "https://alex1056.github.io/news-explorer-frontend/",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "start": "webpack-dev-server --open",
     "build": "NODE_ENV=production rimraf dist && webpack --mode production",
     "deploy": "NODE_ENV=production gh-pages -d dist"
   },

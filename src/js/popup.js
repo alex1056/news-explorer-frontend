@@ -46,7 +46,7 @@ export default class Popup {
     const popupTemplates = {
       popupLogin: `<div id="popupLogin" class="popup">
       <div class="popup__content">
-        <img src="../images/close.svg" alt="" class="popup__close" />
+      <img src="${require('../images/close.svg').default}" alt="Закрыть попап" class="popup__close" />
         <h3 class="popup__title">Вход</h3>
         <form id="formLogin" class="form" name="formLogin">
           <fieldset class="form__fieldset">

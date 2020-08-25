@@ -23,18 +23,33 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
+          isDev ? 'style-loader'
+            : {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: '../',
+              },
+            },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+          },
         ],
       },
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
         use: [
-          'file-loader?name=../images/[name].[ext]',
+          'file-loader?name=./images/[name].[ext]',
           {
             loader: 'image-webpack-loader',
-            options: {},
+            options: {
+              esModule: false,
+            },
           },
         ],
       },
@@ -46,7 +61,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/style.[contenthash].css',
+      filename: './css/style.[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
@@ -58,13 +73,13 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      template: './src/pages/index.html',
+      template: './src/index.html',
       filename: 'index.html',
       chunks: ['main'],
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      template: './src/pages/articles.html',
+      template: './src/articles.html',
       filename: 'articles.html',
       chunks: ['articles'],
     }),
