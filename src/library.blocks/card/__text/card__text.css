@@ -17,6 +17,31 @@
 
 @media screen and (max-width: 1439px) {
   .card__text {
-    padding-bottom: 12px;
+    /* padding-bottom: 12px; */
+    margin-bottom: 12px;
+    /* margin: 0; Убираем внешний отступ */
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    /* background-color: salmon; */
+    height: 50px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .card__text {
+
+    -webkit-line-clamp: 2; /* Число отображаемых строк */
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card__text {
+
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    height: 50px;
   }
 }
