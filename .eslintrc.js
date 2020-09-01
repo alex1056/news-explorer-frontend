@@ -12,7 +12,7 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'import/no-dynamic-require': 'off',
-    'no-underscore-dangle': [2, { allow: ['foo_', '_id', '_template', '_popup', '_createNode', '_getTemplate', '_setEventListeners'] }],
+    'no-underscore-dangle': 'off',
     'func-names': ['error', 'never', { generators: 'as-needed' }],
     'import/no-extraneous-dependencies': [
       'error',

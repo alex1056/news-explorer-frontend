@@ -1,6 +1,7 @@
+@import url(./_no-authorized/header__mobile-menu-back_no-authorized.css);
 .header__mobile-menu-back {
   width: 100%;
-  background: #1A1B22;
+  background: #1a1b22;
   border-radius: 0 0 16px 16px;
   display: flex;
   justify-items: flex-start;

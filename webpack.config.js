@@ -8,7 +8,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  entry: { main: './src/js/index.js', articles: './src/js/articles.js' },
+  entry: { main: './src/index.js', articles: './src/articles' },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].[chunkhash].js',

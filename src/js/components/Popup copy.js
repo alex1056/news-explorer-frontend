@@ -7,19 +7,9 @@ function _createNode(_template) {
 export default class Popup {
   constructor(template) {
     this._template = template;
-    this._popup = document.createElement('div');
-    this._popup.classList.add('popup');
   }
 
-  // _createNode(_template) {
-  // static _createNode(_template) {
-  //   const template = document.createElement('template');
-  //   template.innerHTML = _template;
-  //   return template.content.firstElementChild;
-  // }
-
   open() {
-    // this._popup = this._createNode(this._getTemplate());
     this._popup = _createNode(this._getTemplate());
     this._popup.classList.toggle('popup_is-opened');
     const rootNode = document.querySelector('.page');
@@ -29,41 +19,88 @@ export default class Popup {
 
   close() {
     this._popup.classList.toggle('popup_is-opened');
+    const closeButton = this._popup.querySelector('.popup__close');
+    closeButton.removeEventListener('click', this.close.bind(this));
+
+    const popupContent = this._popup.querySelector('.popup__content');
+    popupContent.removeEventListener('click', this._callBackPopupContent.bind(this));
+    this._popup.removeEventListener('click', this.close.bind(this));
+
     this._popup.parentNode.removeChild(this._popup);
+  }
+
+  _callBackPopupContent(event) {
+    event.stopImmediatePropagation();
   }
 
   _setEventListeners() {
     if (this._popup.querySelector('.popup__close')) {
       const closeButton = this._popup.querySelector('.popup__close');
       closeButton.addEventListener('click', this.close.bind(this));
-    } else if (this._popup.querySelector('.popup-pic__close')) {
-      const closeButton = this._popup.querySelector('.popup-pic__close');
-      closeButton.addEventListener('click', this.close.bind(this));
+      const popupContent = this._popup.querySelector('.popup__content');
+      popupContent.addEventListener('click', this._callBackPopupContent.bind(this));
+      this._popup.addEventListener('click', this.close.bind(this));
     }
   }
 
   _getTemplate() {
     const popupTemplates = {
-      popupLogin: `<div id="popupLogin" class="popup">
+      purePopup: `<div id="popupLogin" class="popup">
       <div class="popup__content">
-      <img src="${require('../images/close.svg').default}" alt="Закрыть попап" class="popup__close" />
+      <img src="${require('../../images/close.svg').default}" alt="Закрыть попап" class="popup__close" />
         <h3 class="popup__title">Вход</h3>
         <form id="formLogin" class="form" name="formLogin">
           <fieldset class="form__fieldset">
             <label for="emailField" class="form__label">Email</label>
             <input type="email" name="emailField" id="email" class="form__input" placeholder="Введите почту"
               required />
-            <span class="form__err-message">Неправильный формат email</span>
+            <span class="form__err-message" id="erroremail"></span>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset_small-margin">
             <label for="passwordField" class="form__label">Пароль</label>
             <input type="password" name="passwordField" id="password" class="form__input" placeholder="Введите пароль"
               required minlength="8"/>
-            <span class="form__err-message"> </span>
+            <span class="form__err-message" id="errorpassword"> </span>
           </fieldset>
-          <button disabled type="submit" id="submit" class="button form__button button__disabled">
+
+          <p class="form__err-message" id="formerrmessage"> </p>
+          <button disable="true" type="submit" id="submit" class="button form__button button_disabled">
             Зарегистрироваться
           </button>
+
+        </form>
+        <div class="popup__reg-enter">
+          <p class="text popup__text">или&nbsp;</p>
+          <a href="#" class="link popup__link">Зарегистрироваться</a>
+        </div>
+      </div>
+    </div>`,
+
+
+
+      popupLogin: `<div id="popupLogin" class="popup">
+      <div class="popup__content">
+      <img src="${require('../../images/close.svg').default}" alt="Закрыть попап" class="popup__close" />
+        <h3 class="popup__title">Вход</h3>
+        <form id="formLogin" class="form" name="formLogin">
+          <fieldset class="form__fieldset">
+            <label for="emailField" class="form__label">Email</label>
+            <input type="email" name="emailField" id="email" class="form__input" placeholder="Введите почту"
+              required />
+            <span class="form__err-message" id="erroremail"></span>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset_small-margin">
+            <label for="passwordField" class="form__label">Пароль</label>
+            <input type="password" name="passwordField" id="password" class="form__input" placeholder="Введите пароль"
+              required minlength="8"/>
+            <span class="form__err-message" id="errorpassword"> </span>
+          </fieldset>
+
+          <p class="form__err-message" id="formerrmessage"> </p>
+          <button disable="true" type="submit" id="submit" class="button form__button button_disabled">
+            Зарегистрироваться
+          </button>
+
         </form>
         <div class="popup__reg-enter">
           <p class="text popup__text">или&nbsp;</p>
