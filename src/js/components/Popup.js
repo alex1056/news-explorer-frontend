@@ -1,7 +1,9 @@
 function _createNode(_template) {
   const template = document.createElement('template');
-  template.innerHTML = _template;
-  return template.content.firstElementChild;
+  // template.innerHTML = _template;
+  template.insertAdjacentHTML('afterbegin', _template);
+  // return template.content.firstElementChild;
+  return template.firstElementChild;
 }
 
 export default class Popup {

@@ -10,20 +10,22 @@
 @import url(./__text/card__text.css);
 @import url(./__text-container/card__text-container.css);
 @import url(./__tag/card__tag.css);
+@import url(./__link/card__link.css);
+@import url(./__img-container/card__img-container.css);
 
 .card {
-/* background-color: salmon; */
-background-color: white;
-/* display: flex; */
-/* flex-direction: column; */
-border-radius: 15px 15px 15px 15px;
-position: relative;
-height: 576px;
-display: grid;
-grid-template-rows: auto 1fr;
-height: 100%;
-width: 100%;
-margin: 0 auto;
+  /* background-color: salmon; */
+  background-color: white;
+  /* display: flex; */
+  /* flex-direction: column; */
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+  height: 576px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* @media screen and (max-width: 1439px) {
@@ -40,14 +42,21 @@ margin: 0 auto;
 
 @media screen and (max-width: 767px) {
   .card {
-    height: 440px;
+    height: 470px;
+    max-width: 330px;
   }
 }
 
 @media screen and (max-width: 550px) {
   .card {
-    height: 470px;
+    height: 490px;
     max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .card {
+    height: 490px;
   }
 }
 

@@ -113,6 +113,7 @@
                 name="searchText"
                 class="search__input"
                 placeholder="Введите тему новости"
+                id="searchinput"
               />
               <button type="submit" class="button search__button">
                 Искать
@@ -227,14 +228,14 @@
         </div>
       </section> -->
 
-        <!-- <section class="preloader-block preloader-block_enabled">
-        <div class="preloader-block__container">
-          <div class="circle-preloader"></div>
-          <p class="text preloader-block__text">Идет поиск новостей</p>
-        </div>
-      </section> -->
+        <section class="preloader-block">
+          <div class="preloader-block__container">
+            <div class="circle-preloader"></div>
+            <p class="text preloader-block__text">Идет поиск новостей</p>
+          </div>
+        </section>
 
-        <section class="result">
+        <section class="result result_enabled">
           <div class="result__container">
             <h2 class="content-title result__content-title">
               Результаты поиска
@@ -250,12 +251,13 @@
 
                   <div class="card__save-article-btn"></div>
                 </div>
-
-                <img
-                  src="<%=require('./images/img1.png').default%>"
-                  alt="Природа 1"
-                  class="card__img"
-                />
+                <div class="card__img-container">
+                  <img
+                    src="<%=require('./images/img1.png').default%>"
+                    alt="Природа 1"
+                    class="card__img"
+                  />
+                </div>
                 <div class="card__text-container">
                   <p class="card__date">2 августа, 2019</p>
                   <h3 class="content-subtitle card__content-subtitle">
@@ -277,12 +279,13 @@
                     class="card__save-article-btn card__save-article-btn_saved"
                   ></div>
                 </div>
-
-                <img
-                  src="<%=require('./images/img2.png').default%>"
-                  alt="Природа 2"
-                  class="card__img"
-                />
+                <div class="card__img-container">
+                  <img
+                    src="<%=require('./images/img2.png').default%>"
+                    alt="Природа 2"
+                    class="card__img"
+                  />
+                </div>
                 <div class="card__text-container">
                   <p class="card__date">2 августа, 2019</p>
                   <h3 class="content-subtitle card__content-subtitle">
@@ -309,12 +312,13 @@
 
                   <div class="card__remove-article-btn"></div>
                 </div>
-
-                <img
-                  src="<%=require('./images/img3.png').default%>"
-                  alt="Природа 3"
-                  class="card__img"
-                />
+                <div class="card__img-container">
+                  <img
+                    src="<%=require('./images/img3.png').default%>"
+                    alt="Природа 3"
+                    class="card__img"
+                  />
+                </div>
                 <div class="card__text-container">
                   <p class="card__date">2 августа, 2019</p>
                   <h3 class="content-subtitle card__content-subtitle">

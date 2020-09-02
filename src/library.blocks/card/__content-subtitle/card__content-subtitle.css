@@ -1,13 +1,28 @@
 .card__content-subtitle {
-  color: #1A1B22;
+  color: #1a1b22;
   padding-bottom: 16px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1440px) {
+  .card__content-subtitle {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 49px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
   .card__content-subtitle {
     font-size: 22px;
     line-height: 24px;
     padding-bottom: 10px;
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    height: 70px;
   }
 }
 
@@ -16,5 +31,14 @@
     font-size: 21px;
     line-height: 24px;
     padding-bottom: 10px;
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card__content-subtitle {
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    height: 65px;
   }
 }
