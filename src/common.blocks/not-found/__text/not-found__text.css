@@ -3,15 +3,14 @@
   font-size: 18px;
   line-height: 24px;
   text-align: center;
-  color: #B6BCBF;
-  display: flex;
+  color: #b6bcbf;
   margin: 0 auto;
   padding-top: 16px;
 }
 
 @media screen and (max-width: 767px) {
-  .not-found__text{
-     width: calc(100% - 32px);
-     max-width: 356px;
-   }
- }
+  .not-found__text {
+    width: calc(100% - 32px);
+    max-width: 356px;
+  }
+}

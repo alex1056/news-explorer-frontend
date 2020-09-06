@@ -1,6 +1,8 @@
 /* eslint-disable class-methods-use-this */
 export default class NewsApi {
-  constructor({ url, apiKey, language, pageSize }) {
+  constructor({
+    url, apiKey, language, pageSize,
+  }) {
     this._Url = url;
     this._ApiKey = apiKey;
     this._language = language;
@@ -12,12 +14,10 @@ export default class NewsApi {
     return fetch(`${this._Url}q=${searchPhrase}&from=${dates.from}&to=${dates.to}&language=${this._language}&pageSize=${this._pageSize}&apiKey=${this._ApiKey}`)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
-        // if (res.ok) {
-        //   // console.log(res);
-        return Promise.resolve(data);
-
-        // return Promise.reject(Error('Неправильные логин или пароль'));
+        const arrComputed = this.createArrayFromComputedData(data.articles, searchPhrase);
+        const dataComputed = data;
+        dataComputed.articles = arrComputed;
+        return Promise.resolve(dataComputed);
       })
       .catch(() => Promise.reject(Error('Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.')));
   }
@@ -41,5 +41,35 @@ export default class NewsApi {
     dateFrom += result.getDate() < 10 ? `-0${result.getDate()}` : `-${result.getDate()}`;
 
     return { from: dateFrom, to: dateTo };
+  }
+
+  createArrayFromComputedData(arr, searchPhrase) {
+    return arr.map((dataObjFromNewsApi) => this.createCardObject(dataObjFromNewsApi, searchPhrase));
+  }
+
+  createCardObject(dataObjFromNewsApi, searchPhrase) {
+    try {
+      const {
+        description,
+        publishedAt,
+        source,
+        title,
+        url,
+        urlToImage,
+      } = dataObjFromNewsApi;
+
+      const dataObj = {
+        keyword: searchPhrase,
+        title,
+        link: url,
+        text: description,
+        image: urlToImage,
+        date: publishedAt,
+        source: source.name,
+      };
+      return dataObj;
+    } catch (error) {
+      throw new Error('Пришли невалидные данные от NewsApi');
+    }
   }
 }

@@ -5,10 +5,11 @@ export default class LoginLogout {
     this._sessionHandler = null;
     this._mainApi = null;
     this._header = null;
+    this._newsCardList = null;
   }
 
   setArgs({
-    popup, form, sessionHandler, mainApi, header, pageName,
+    popup, form, sessionHandler, mainApi, header, pageName, newsCardList,
   }) {
     this._popup = popup;
     this._form = form;
@@ -16,6 +17,7 @@ export default class LoginLogout {
     this._mainApi = mainApi;
     this._header = header;
     this._pageName = pageName;
+    this._newsCardList = newsCardList;
   }
 
   logout() {
@@ -24,6 +26,7 @@ export default class LoginLogout {
         this._sessionHandler.logoutSession();
         const props = { isLoggedIn: false, userName: 'Авторизоваться' };
         this._header.render(props);
+        this._newsCardList.init();
       })
       .catch((err) => Promise.reject(Error(err.message)));
   }
@@ -34,13 +37,14 @@ export default class LoginLogout {
       window.location.href = '../';
       return;
     }
-    if (this._sessionHandler.getName()) {
+    if (this._sessionHandler.isLoggedInFunc()) {
       this.logout();
-    } else if (!this._sessionHandler.getName()) {
+    } else {
       this._popup.setForm(this._form);
       this._popup.setApi(this._mainApi);
       this._popup.open();
       this._popup.setContent('popupRegistrContent');
+      this._newsCardList.init();
     }
   }
 }

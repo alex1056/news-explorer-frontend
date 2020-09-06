@@ -1,7 +1,7 @@
 export default class Header {
   constructor({ color }) {
     this._headerColor = color;
-    this._isLoggedIn = null;
+    this._isLoggedIn = false;
     this._userName = null;
     this._mobileMenuOpen = false;
 
@@ -39,7 +39,7 @@ export default class Header {
       const headerAuthBtnNames = document.querySelectorAll('.auth-btn__name-text');
       headerAuthBtnNames.forEach((item) => {
         const currItem = item;
-        currItem.textContent = userName || 'userName';
+        currItem.textContent = userName || 'Авторизоваться';
       });
       const headerAuthBtnLogOutIcons = document.querySelectorAll('.auth-btn__logout-icon');
       headerAuthBtnLogOutIcons.forEach((item) => {
@@ -51,7 +51,6 @@ export default class Header {
       headerMobileMenuBack.classList.remove('header__mobile-menu-back_no-authorized');
     } else {
       const headerArticlesLinks = document.querySelectorAll('#articlespage');
-
       headerArticlesLinks.forEach((item) => {
         const currItem = item;
         currItem.classList.add('header__menu-item_disabled');

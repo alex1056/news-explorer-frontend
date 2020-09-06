@@ -18,7 +18,7 @@
     />
   </head>
 
-  <body>
+  <body class="body">
     <div class="page">
       <header class="header header_dark">
         <div class="header__container">
@@ -91,219 +91,19 @@
         </div>
       </header>
 
-      <main>
+      <main class="main">
         <section class="intro-art">
           <div class="intro-art__container">
             <h1 class="intro-art__title">Сохраненные статьи</h1>
             <h2 class="content-title intro-art__subtitle">
               Грета, у вас 5 сохранённых статей
             </h2>
-            <div class="intro-art__tags">
-              <p class="text intro-art__text">По ключевым словам:&nbsp;</p>
-              <p class="text text_bold intro-art__text">Природа, Тайга</p>
-              <p class="text intro-art__text">&nbsp;и&nbsp;</p>
-              <p class="text text_bold intro-art__text">2 другим</p>
-            </div>
           </div>
         </section>
 
         <section class="cards">
           <div class="cards__container">
-            <div class="grid-cards cards__grid-cards">
-              <article class="card">
-                <div class="card__tag card__tag_enabled">
-                  <p
-                    class="card__notification-text card__notification-text_tag"
-                  >
-                    Природа
-                  </p>
-                </div>
-
-                <div class="card__save-article-container">
-                  <!-- <div class="card__notification card__notification_enabled">
-                  <p class="card__notification-text card__notification-text_remove">Убрать из сохраненных
-                  </p>
-                </div> -->
-                  <div class="card__remove-article-btn"></div>
-                </div>
-
-                <img
-                  src="<%=require('./images/img4.png').default%>"
-                  alt="Природа 1"
-                  class="card__img"
-                />
-                <div class="card__text-container">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h3 class="content-subtitle card__content-subtitle">
-                    Национальное достояние – парки
-                  </h3>
-                  <p class="text card__text">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может
-                    приобщиться к природе.
-                  </p>
-                  <p class="card__source">Лента.ру</p>
-                </div>
-              </article>
-
-              <article class="card">
-                <!-- <div class="card__notification card__notification_tag card__notification_enabled">
-                <p class="card__notification-text card__notification-text_tag">Природа</p>
-              </div> -->
-
-                <div class="card__tag card__tag_enabled">
-                  <p
-                    class="card__notification-text card__notification-text_tag"
-                  >
-                    Природа2
-                  </p>
-                </div>
-
-                <div class="card__save-article-container">
-                  <!-- <div class="card__notification card__notification_enabled">
-                    <p class="card__notification-text card__notification-text_remove">Убрать из сохраненных
-                    </p>
-                  </div> -->
-                  <div class="card__remove-article-btn"></div>
-                </div>
-
-                <img
-                  src="<%=require('./images/img5.png').default%>"
-                  alt="Природа 2"
-                  class="card__img"
-                />
-                <div class="card__text-container">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h3 class="content-subtitle card__content-subtitle">
-                    Лесные огоньки: история одной фотографии
-                  </h3>
-                  <p class="text card__text">
-                    Фотограф отвлеклась от освещения суровой политической
-                    реальности Мексики, чтобы запечатлеть ускользающую красоту
-                    одного из местных чудес природы.
-                  </p>
-                  <p class="card__source">Медуза</p>
-                </div>
-              </article>
-
-              <article class="card">
-                <div class="card__tag card__tag_enabled">
-                  <p
-                    class="card__notification-text card__notification-text_tag"
-                  >
-                    Природа
-                  </p>
-                </div>
-                <div class="card__save-article-container">
-                  <div
-                    class="card__notification card__notification_enabled card__notification_remove-from-saved"
-                  >
-                    <p
-                      class="card__notification-text card__notification-text_remove"
-                    >
-                      Убрать из сохраненных
-                    </p>
-                  </div>
-                  <div class="card__remove-article-btn"></div>
-                </div>
-
-                <img
-                  src="<%=require('./images/img6.png').default%>"
-                  alt="Природа 3"
-                  class="card__img"
-                />
-                <div class="card__text-container">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h3 class="content-subtitle card__content-subtitle">
-                    Национальное достояние – парки
-                  </h3>
-                  <p class="text card__text">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может
-                    приобщиться к природе.
-                  </p>
-                  <p class="card__source">Лента.ру</p>
-                </div>
-              </article>
-              <article class="card">
-                <div class="card__tag card__tag_enabled">
-                  <p
-                    class="card__notification-text card__notification-text_tag"
-                  >
-                    Природа
-                  </p>
-                </div>
-
-                <div class="card__save-article-container">
-                  <!-- <div class="card__notification card__notification_enabled">
-                    <p class="card__notification-text card__notification-text_remove">Убрать из сохраненных
-                    </p>
-                  </div> -->
-                  <div class="card__remove-article-btn"></div>
-                </div>
-
-                <img
-                  src="<%=require('./images/img4.png').default%>"
-                  alt="Природа 1"
-                  class="card__img"
-                />
-                <div class="card__text-container">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h3 class="content-subtitle card__content-subtitle">
-                    Национальное достояние – парки
-                  </h3>
-                  <p class="text card__text">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может
-                    приобщиться к природе.
-                  </p>
-                  <p class="card__source">Лента.ру</p>
-                </div>
-              </article>
-
-              <article class="card">
-                <!-- <div class="card__notification card__notification_tag card__notification_enabled">
-                  <p class="card__notification-text card__notification-text_tag">Природа</p>
-                </div> -->
-
-                <div class="card__tag card__tag_enabled">
-                  <p
-                    class="card__notification-text card__notification-text_tag"
-                  >
-                    Природа2
-                  </p>
-                </div>
-
-                <div class="card__save-article-container">
-                  <!-- <div class="card__notification card__notification_enabled">
-                      <p class="card__notification-text card__notification-text_remove">Убрать из сохраненных
-                      </p>
-                    </div> -->
-                  <div class="card__remove-article-btn"></div>
-                </div>
-
-                <img
-                  src="<%=require('./images/img5.png').default%>"
-                  alt="Природа 2"
-                  class="card__img"
-                />
-                <div class="card__text-container">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h3 class="content-subtitle card__content-subtitle">
-                    Лесные огоньки: история одной фотографии
-                  </h3>
-                  <p class="text card__text">
-                    Фотограф отвлеклась от освещения суровой политической
-                    реальности Мексики, чтобы запечатлеть ускользающую красоту
-                    одного из местных чудес природы.
-                  </p>
-                  <p class="card__source">Медуза</p>
-                </div>
-              </article>
-            </div>
+            <div class="grid-cards cards__grid-cards"></div>
           </div>
         </section>
 

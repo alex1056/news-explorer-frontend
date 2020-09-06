@@ -1,15 +1,4 @@
-function _showErrorMessage(message) {
-  const errorElement = document.querySelector('#formerrmessage');
-  errorElement.textContent = message;
-}
-
 const validatorModule = require('validator');
-
-function _sleep(ms) {
-  return new Promise((resolve) => setTimeout(() => {
-    resolve();
-  }, ms));
-}
 
 export default class Form {
   constructor() {
@@ -37,7 +26,6 @@ export default class Form {
 
   setSessionHandler(sessionHandler) {
     this._sessionHandler = sessionHandler;
-    // console.log(this._sessionHandler);
   }
 
   setHeaderClass(headerObj) {
@@ -62,14 +50,12 @@ export default class Form {
     return true;
   }
 
-  // _setSubmitButtonState(event) {
   _validateForm(event) {
     event.preventDefault();
     const form = this._popup.querySelector('.form');
     const submit = form.querySelector('#submit');
     const inputs = Array.from(form.elements);
     let isValidForm = true;
-    // console.log(inputs);
     inputs.forEach((elem) => {
       if (elem.id && elem.id !== submit.id) {
         if (!this._validateInputElement(elem)) {
@@ -83,7 +69,6 @@ export default class Form {
   setEventListeners() {
     this._handlerFormOpen = this._formHandler.bind(this);
     let currentForm = this._popup.querySelector('#formLogin');
-    // console.log(currentForm);
     if (currentForm) {
       const inputEmail = this._popup.querySelector('#email');
       inputEmail.addEventListener('input', this._handlerFormOpen);
@@ -153,18 +138,16 @@ export default class Form {
         this._api.login(credentials)
           .then((result) => {
             if (result === 200) {
-              this._api.getUserInfo()
+              this._api.getUserData()
                 .then((data) => {
-                  // console.log(data);
                   const { name } = data;
-                  // console.log(name);
                   this._sessionHandler.setUserName(name);
                   const props = { isLoggedIn: true, userName: name };
                   this._header.render(props);
                 })
                 .catch((err) => {
                   console.log(err);
-                  _showErrorMessage(err.message);
+                  this._showErrorMessage(err.message);
                 });
             }
 
@@ -173,7 +156,7 @@ export default class Form {
             return result;
           })
           .catch((err) => {
-            _showErrorMessage(err.message);
+            this._showErrorMessage(err.message);
           });
       }
     }
@@ -182,71 +165,41 @@ export default class Form {
         const inputEmail = this._popup.querySelector('#email');
         const inputPassword = this._popup.querySelector('#password');
         const inputName = this._popup.querySelector('#name');
-        const credentials = { email: inputEmail.value, password: inputPassword.value, name: inputName.value };
+        const credentials = {
+          email: inputEmail.value,
+          password: inputPassword.value,
+          name: inputName.value,
+        };
         this._api.signup(credentials)
           .then((result) => {
             this.removeEventListeners();
-            _sleep(1500);
+            this._sleep(1500);
             this.popupObj.clearContent();
             this.popupObj.setContent('popupSuccessRegistrContent');
             return result;
           })
           .catch((err) => {
-            _showErrorMessage(err.message);
+            this._showErrorMessage(err.message);
           });
       }
     }
   }
-  // else if (
-  //   event.type === 'submit'
-  //   && event.target.closest('#editprofile')
-  // ) {
-  //   if (isValidForm) {
-  //     this._sendForm()
-  //       .then((result) => {
-  //         this.removeEventListeners();
-  //         this.popupObj.close();
-  //         return result;
-  //       })
-  //       .catch((err) => {
-  //         console.log(`Ошибка при сохранении UserInfo: ${err}`);
-  //       });
-  //   }
-  // } else if (event.type === 'submit' && event.target.closest('#newavatar')) {
-  //   if (isValidForm) {
-  //     this._sendForm()
-  //       .then((result) => { this.removeEventListeners(); this.popupObj.close(); return result; })
-  //       .catch((err) => {
-  //         console.log(`Ошибка при сохранении Avatar: ${err}`);
-  //       });
-  //   }
-  // }
-  // }
 
   _sendForm() {
-    // console.log(this.form.id);
     if (this.form.id === 'formLogin') {
-      // const obj = {
-      //   name: this.form.elements.name.value,
-      //   link: this.form.elements.link.value,
-      // };
-      // this._cardList.saveCard(obj);
-      console.log('Отработала ф. отправки формы');
-      // return Promise.resolve(true);
       return this._api.login();
     }
+    return this._sleep(1000);
+  }
 
-    /*
-     else if (this.form.id === 'profileform') {
-       const obj = {
-         name: this.form.elements.name.value,
-         about: this.form.elements.about.value,
-       };
-       this._userInfo.updateUserInfo(obj);
-     } else {
-       this._userInfo._saveAvatar(this.form.elements.link.value);
-     }
-     */
-    return _sleep(1000);
+  _sleep(ms) {
+    return new Promise((resolve) => setTimeout(() => {
+      resolve();
+    }, ms));
+  }
+
+  _showErrorMessage(message) {
+    const errorElement = document.querySelector('#formerrmessage');
+    errorElement.textContent = message;
   }
 }

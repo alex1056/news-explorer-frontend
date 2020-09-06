@@ -21,3 +21,5 @@
 @import url(../library.blocks/container/container.css);
 @import url(../library.blocks/popup/popup.css);
 
+@import url(../common.blocks/body/body.css);
+@import url(../common.blocks/main/main.css);

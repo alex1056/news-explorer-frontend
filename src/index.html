@@ -15,7 +15,7 @@
     />
   </head>
 
-  <body>
+  <body class="body">
     <div class="page">
       <header class="header">
         <div class="header__container">
@@ -93,7 +93,7 @@
         </div>
       </header>
 
-      <main>
+      <main class="main">
         <section class="search">
           <div class="search__container">
             <div class="search__title-subtitle-cont">
@@ -220,13 +220,19 @@
 После раскомментирования блоки будут видимымы. Открыть/скрыть можно модификатором not-found_enabled и preloader-block_enabled
 -->
 
-        <!-- <section class="not-found not-found_enabled">
-        <div class="not-found__container">
-          <img src="/src/images/not-found-icon.svg" alt="Изображение: Ничего не найдено" class="not-found__icon">
-          <h2 class="content-title not-found__title">Ничего не найдено</h2>
-          <p class="text not-found__text">К сожалению по вашему запросу ничего не найдено.</p>
-        </div>
-      </section> -->
+        <section class="not-found">
+          <div class="not-found__container">
+            <img
+              src="/src/images/not-found-icon.svg"
+              alt="Изображение: Ничего не найдено"
+              class="not-found__icon"
+            />
+            <h2 class="content-title not-found__title">Ничего не найдено</h2>
+            <p class="text not-found__text">
+              К сожалению по вашему запросу ничего не найдено.
+            </p>
+          </div>
+        </section>
 
         <section class="preloader-block">
           <div class="preloader-block__container">
@@ -234,15 +240,16 @@
             <p class="text preloader-block__text">Идет поиск новостей</p>
           </div>
         </section>
-
-        <section class="result result_enabled">
+        <!-- <section class="result result_enabled"> -->
+        <section class="result">
           <div class="result__container">
             <h2 class="content-title result__content-title">
               Результаты поиска
             </h2>
             <div class="grid-cards result__grid-cards">
-              <article class="card">
+              <!-- <article class="card">
                 <div class="card__save-article-container">
+
                   <div class="card__notification card__notification_enabled">
                     <p class="card__notification-text">
                       Войдите, чтобы сохранять статьи
@@ -271,9 +278,9 @@
                   </p>
                   <p class="card__source">Лента.ру</p>
                 </div>
-              </article>
+              </article> -->
 
-              <article class="card">
+              <!-- <article class="card">
                 <div class="card__save-article-container">
                   <div
                     class="card__save-article-btn card__save-article-btn_saved"
@@ -298,18 +305,10 @@
                   </p>
                   <p class="card__source">Медуза</p>
                 </div>
-              </article>
+              </article> -->
 
-              <article class="card">
-                <!-- <div class="card__notification card__notification_tag card__notification_enabled">
-                <p class="card__notification-text card__notification-text_tag">Природа</p>
-              </div> -->
+              <!-- <article class="card">
                 <div class="card__save-article-container">
-                  <!-- <div class="card__notification card__notification_enabled">
-                  <p class="card__notification-text card__notification-text_remove">Убрать из сохраненных
-                  </p>
-                </div> -->
-
                   <div class="card__remove-article-btn"></div>
                 </div>
                 <div class="card__img-container">
@@ -332,7 +331,7 @@
                   </p>
                   <p class="card__source">Лента.ру</p>
                 </div>
-              </article>
+              </article> -->
             </div>
             <button class="button result__btn">Показать еще</button>
           </div>

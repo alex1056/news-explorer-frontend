@@ -11,6 +11,10 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
+    'consistent-return': 'off',
+    'class-methods-use-this': 'off',
+    'array-callback-return': 'off',
+    'no-param-reassign': 'off',
     'import/no-dynamic-require': 'off',
     'no-underscore-dangle': 'off',
     'func-names': ['error', 'never', { generators: 'as-needed' }],

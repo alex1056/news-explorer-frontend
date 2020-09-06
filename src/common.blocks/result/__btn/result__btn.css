@@ -1,7 +1,9 @@
+@import url(./_disabled/result__btn_disabled.css);
+
 .result__btn {
-  background: #FFF;
+  background: #fff;
   border-radius: 80px;
-  color: #1A1B22;
+  color: #1a1b22;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -9,6 +11,7 @@
   height: 64px;
   box-shadow: none;
   margin: 0 auto;
+  display: block;
 }
 
 .result__btn:hover {

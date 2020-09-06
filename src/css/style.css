@@ -22,3 +22,6 @@
 @import url(../library.blocks/circle-preloader/circle-preloader.css);
 @import url(../library.blocks/popup/popup.css);
 @import url(../library.blocks/form/form.css);
+
+@import url(../common.blocks/body/body.css);
+@import url(../common.blocks/main/main.css);

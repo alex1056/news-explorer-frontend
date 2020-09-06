@@ -22,7 +22,7 @@
     display: -webkit-box; /* Включаем флексбоксы */
     -webkit-box-orient: vertical; /* Вертикальная ориентация */
     overflow: hidden; /* Обрезаем всё за пределами блока */
-    height: 70px;
+    height: 65px;
   }
 }
 
@@ -32,7 +32,7 @@
     line-height: 24px;
     padding-bottom: 10px;
     -webkit-line-clamp: 3; /* Число отображаемых строк */
-    height: 70px;
+    /* height: 70px; */
   }
 }
 

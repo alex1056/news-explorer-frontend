@@ -7,9 +7,15 @@
   font-family: 'Roboto', Verdana, 'Geneva CY', 'San-serif';
   font-style: normal;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 12px;
   align-items: center;
   text-align: center;
   color: #000000;
+}
+
+@media screen and (max-width: 767px) {
+  .card__notification-text {
+    display: none;
+  }
 }

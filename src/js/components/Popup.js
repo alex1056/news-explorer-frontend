@@ -1,15 +1,7 @@
-function _createNode(_template) {
-  const template = document.createElement('template');
-  // template.innerHTML = _template;
-  template.insertAdjacentHTML('afterbegin', _template);
-  // return template.content.firstElementChild;
-  return template.firstElementChild;
-}
-
 export default class Popup {
   constructor(template) {
     this._template = template;
-    this._popup = _createNode(this._getTemplate());
+    this._popup = this._createNode(this._getTemplate());
     this._form = null;
     this._api = null;
   }
@@ -22,12 +14,7 @@ export default class Popup {
     this._api = apiObj;
   }
 
-
   open() {
-    // this._template = 'purePopup';
-
-    // console.log(this._popup);
-    // console.log(this._getTemplate());
     this._popup.classList.toggle('popup_is-opened');
     const rootNode = document.querySelector('.page');
     this._setEventListeners();
@@ -37,7 +24,7 @@ export default class Popup {
   setContent(contentTemplateName) {
     this._template = contentTemplateName;
     const template = this._popup.querySelector('.popup__place-content');
-    template.innerHTML = this._getTemplate();
+    template.appendChild(this._createNode(this._getTemplate()));
     this._form.setPopup(this._popup, this);
     this._form.setEventListeners();
     this._form.setApi(this._api);
@@ -50,12 +37,22 @@ export default class Popup {
       actionLink.removeEventListener('click', this._openPopupFromPopup.bind(this));
     }
     const template = this._popup.querySelector('.popup__place-content');
-    template.innerHTML = '';
+    this._removeInternalContent(template);
+  }
+
+  _removeInternalContent(nodeTemplate) {
+    try {
+      const nodesToRemove = nodeTemplate.querySelectorAll('*');
+      nodesToRemove.forEach((nodeToRemove) => {
+        nodeToRemove.parentNode.removeChild(nodeToRemove);
+      });
+    } catch (err) {
+      console.log('Удаление контента popup ', err.message);
+    }
   }
 
   close() {
     this._popup.classList.remove('popup_is-opened');
-    // console.log(this._popup);
     this.clearContent();
   }
 
@@ -74,7 +71,6 @@ export default class Popup {
   }
 
   _openPopupFromPopup() {
-    // console.log(this._template);
     this.clearContent();
     if (this._template === 'popupRegistrContent') {
       this.setContent('loginPopupContent');
@@ -86,7 +82,6 @@ export default class Popup {
     }
     if (this._template === 'popupSuccessRegistrContent') {
       this.setContent('loginPopupContent');
-      return;
     }
   }
 
@@ -100,24 +95,25 @@ export default class Popup {
       purePopup: `<div id="popup" class="popup">
       <div class="popup__content">
       <img src="${require('../../images/close.svg').default}" alt="Закрыть попап" class="popup__close" />
-      <div class="popup__place-content">
-      </div>
-
+        <div class="popup__place-content">
+        </div>
       </div>
     </div>`,
 
-      loginPopupContent: `<h3 class="popup__title">Вход</h3>
+      loginPopupContent: `
+      <div>
+      <h3 class="popup__title">Вход</h3>
     <form id="formLogin" class="form" name="formLogin">
       <fieldset class="form__fieldset">
         <label for="emailField" class="form__label">Email</label>
         <input type="email" name="emailField" id="email" class="form__input" placeholder="Введите почту"
-          required />
+          required autocomplete="on"/>
         <span class="form__err-message" id="erroremail"></span>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset_small-margin">
         <label for="passwordField" class="form__label">Пароль</label>
         <input type="password" name="passwordField" id="password" class="form__input" placeholder="Введите пароль"
-          required minlength="2"/>
+          required minlength="2" autocomplete="current-password"/>
         <span class="form__err-message" id="errorpassword"> </span>
       </fieldset>
 
@@ -130,9 +126,12 @@ export default class Popup {
     <div class="popup__reg-enter">
       <p class="text popup__text">или&nbsp;</p>
       <a href="#" class="link popup__link" id="actionlink">Зарегистрироваться</a>
+    </div>
     </div>`,
 
-      popupRegistrContent: `<h3 class="popup__title">Регистрация</h3>
+      popupRegistrContent: `
+      <div>
+      <h3 class="popup__title">Регистрация</h3>
     <form id="formRegister" class="form" name="formRegister">
       <fieldset class="form__fieldset">
         <label for="emailField" class="form__label">Email</label>
@@ -143,14 +142,14 @@ export default class Popup {
       <fieldset class="form__fieldset">
         <label for="passwordField" class="form__label">Пароль</label>
         <input type="password" name="passwordField" id="password" class="form__input" placeholder="Введите пароль"
-          required />
+          required autocomplete="off"/>
         <span class="form__err-message" id="errorpassword"> </span>
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset_small-margin">
         <label for="nameField" class="form__label">Имя</label>
         <input type="text" name="nameField" id="name" class="form__input" placeholder="Введите своё имя"
-          required minlength="2"/>
+          required minlength="2" autocomplete="off"/>
         <span class="form__err-message" id="errorname"> </span>
       </fieldset>
 
@@ -162,12 +161,22 @@ export default class Popup {
     <div class="popup__reg-enter">
       <p class="text popup__text">или&nbsp;</p>
       <a href="#" class="link popup__link" id="actionlink">Войти</a>
+    </div>
     </div>`,
-      popupSuccessRegistrContent: `<h3 class="popup__title popup__title_success">Пользователь успешно зарегистрирован</h3>
+      popupSuccessRegistrContent: `
+      <div>
+      <h3 class="popup__title popup__title_success">Пользователь успешно зарегистрирован</h3>
     <div class="popup__reg-enter">
       <a href="#" class="link popup__link popup__link_success" id="actionlink">Выполнить вход</a>
+    </div>
     </div>`,
     };
     return popupTemplates[this._template];
+  }
+
+  _createNode(_template) {
+    const template = document.createElement('template');
+    template.insertAdjacentHTML('afterbegin', _template);
+    return template.firstElementChild;
   }
 }

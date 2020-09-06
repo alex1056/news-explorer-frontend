@@ -1,9 +1,9 @@
 @import url(./__container/cards__container.css);
 @import url(./__grid-cards/cards__grid-cards.css);
+@import url(./_enabled/cards_enabled.css);
 
 .cards {
   width: 100%;
-  display: flex;
-  background: #F5F6F7;
+  display: none;
+  background: #f5f6f7;
 }
-

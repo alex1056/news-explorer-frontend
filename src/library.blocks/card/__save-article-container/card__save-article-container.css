@@ -1,4 +1,3 @@
-
 .card__save-article-container {
   position: absolute;
   height: 40px;
@@ -6,6 +5,7 @@
   top: 24px;
   display: flex;
   justify-content: flex-end;
+  z-index: 2;
 }
 
 @media screen and (max-width: 1439px) {
@@ -15,14 +15,12 @@
   }
 }
 
-
 @media screen and (max-width: 1280px) {
   .card__save-article-container {
     right: 8px;
     top: 8px;
   }
 }
-
 
 @media screen and (max-width: 767px) {
   .card__save-article-container {

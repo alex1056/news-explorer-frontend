@@ -12,6 +12,7 @@
 @import url(./__tag/card__tag.css);
 @import url(./__link/card__link.css);
 @import url(./__img-container/card__img-container.css);
+@import url(./__article-btn/card__article-btn.css);
 
 .card {
   /* background-color: salmon; */

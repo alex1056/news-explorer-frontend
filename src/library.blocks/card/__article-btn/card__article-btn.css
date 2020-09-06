@@ -1,0 +1,15 @@
+@import url(./_type/_remove/card__article-btn_type_remove.css);
+@import url(./_type/_saved/card__article-btn_type_saved.css);
+.card__article-btn {
+  width: 40px;
+  height: 40px;
+  background: url('../../../images/flag-icon-grey.svg');
+  background-size: cover;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.card__article-btn:hover {
+  background: url('../../../images/flag-icon-black.svg');
+  transition: background 0.2s;
+}

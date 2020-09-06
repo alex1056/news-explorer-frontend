@@ -21,6 +21,7 @@
 
 @media screen and (max-width: 1439px) {
   .card__text {
+    padding-top: 5px;
     margin-bottom: 12px;
     -webkit-line-clamp: 3; /* Число отображаемых строк */
     display: -webkit-box; /* Включаем флексбоксы */
@@ -41,5 +42,6 @@
   .card__text {
     -webkit-line-clamp: 3; /* Число отображаемых строк */
     height: 50px;
+    padding-top: 5px;
   }
 }
