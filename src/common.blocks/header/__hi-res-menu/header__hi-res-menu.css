@@ -1,0 +1,17 @@
+.header__hi-res-menu__hi-res-menu {
+  display: flex;
+}
+
+
+@media screen and (max-width: 1440px) {
+  .header__hi-res-menu{
+    display: flex;
+   }
+ }
+
+@media screen and (max-width: 767px) {
+  .header__hi-res-menu{
+    display: none;
+   }
+ }
+

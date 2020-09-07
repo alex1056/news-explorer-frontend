@@ -1,0 +1,10 @@
+.intro-art__tags {
+  color: #1A1B22;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .intro-art__tags {
+    display: block;
+  }
+}

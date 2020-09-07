@@ -1,0 +1,15 @@
+@import url(./_theme/_dark/auth-btn_theme_dark.css);
+@import url(./__logout-icon/auth-btn__logout-icon.css);
+@import url(./__name-text/auth-btn__name-text.css);
+.auth-btn {
+  border: 1px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 100px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 11px;
+  padding-bottom: 13px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+}

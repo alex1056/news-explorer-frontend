@@ -1,0 +1,4 @@
+.header__menu-item_selected {
+  border-bottom: 3px solid currentColor;
+  box-sizing: border-box;
+}

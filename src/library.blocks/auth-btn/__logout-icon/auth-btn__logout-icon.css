@@ -1,0 +1,14 @@
+@import url(./_theme/_white/auth-btn__logout-icon_theme_white.css);
+@import url(./_enabled/auth-btn__logout-icon_enabled.css);
+
+
+.auth-btn__logout-icon {
+  display: none;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  /* padding-left: 10px; */
+  margin-left: 10px;
+  background: url('../../../images/logout-btn-dark.svg');
+}
+

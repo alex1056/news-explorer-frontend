@@ -1,0 +1,16 @@
+.header__mobile-menu.header__mobile-menu_enabled {
+  display: none;
+}
+
+
+ @media screen and (max-width: 1439px) {
+ .header__mobile-menu.header__mobile-menu_enabled{
+  display: none;
+   }
+ }
+
+ @media screen and (max-width: 767px) {
+ .header__mobile-menu.header__mobile-menu_enabled{
+  display: flex;
+   }
+ }

@@ -1,0 +1,25 @@
+.search__container {
+  width: 608px;
+  /* background-color: blue; */
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 86px;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .search__container {
+    width: 452px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__container {
+   padding-top: 86px;
+   justify-content: space-between;
+   padding-right: 16px;
+   padding-left: 16px;
+  }
+}

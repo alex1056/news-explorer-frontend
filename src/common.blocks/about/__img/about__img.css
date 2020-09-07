@@ -1,0 +1,25 @@
+.about__img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: static;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* @media screen and (max-width: 767px) {
+  .about__img-container{
+    padding-top: 0;
+  }
+} */
+
+@media screen and (max-width: 500px) {
+  .about__img-container{
+    /* margin-right: 20px;
+    margin-left: 20px; */
+    margin: 0 auto;
+  }
+}

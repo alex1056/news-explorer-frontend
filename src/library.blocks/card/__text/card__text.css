@@ -1,0 +1,47 @@
+.card__text {
+  font-family: 'Roboto', Verdana, 'Geneva CY', 'San-serif';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1a1b22;
+  padding-bottom: 18px;
+}
+
+@media screen and (min-width: 1440px) {
+  .card__text {
+    padding-bottom: 18px;
+    -webkit-line-clamp: 5; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    height: 95px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .card__text {
+    padding-top: 5px;
+    margin-bottom: 12px;
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card__text {
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card__text {
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    height: 50px;
+    padding-top: 5px;
+  }
+}

@@ -1,0 +1,10 @@
+.footer__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  padding-left: 22px;
+}
+
+/* .footer__icon:last-child {
+  padding-right: 0;
+} */

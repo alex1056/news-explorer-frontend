@@ -1,0 +1,25 @@
+.button.button_disabled {
+  background: #E6E8EB;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  /* display: flex;
+  align-items: center; */
+  text-align: center;
+  color: #B6BCBF;
+  box-shadow: none;
+}
+
+.button.button_disabled:hover {
+  background: #E6E8EB;
+  color: #B6BCBF;
+  outline: none;
+  transition: background .2s;
+}
+/*
+.button.button__disabled:focus {
+  background: #E6E8EB;
+  color: #B6BCBF;
+  outline: none;
+  transition: background .2s;
+} */

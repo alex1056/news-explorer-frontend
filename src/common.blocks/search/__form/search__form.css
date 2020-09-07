@@ -1,0 +1,26 @@
+.search__form {
+  width: 100%;
+  font-family: 'Roboto', Verdana, 'Geneva CY', 'San-serif';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+  position: relative;
+  margin-top: 64px;
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 1439px) {
+  .search__form {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__form {
+    margin-bottom: 32px;
+    position: static;
+  }
+}

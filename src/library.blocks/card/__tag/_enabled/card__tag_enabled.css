@@ -1,0 +1,9 @@
+.card__tag.card__tag_enabled {
+  display: flex;
+}
+/*
+@media screen and (max-width: 767px) {
+  .card__notification.card__notification_enabled {
+    display: none;
+  }
+} */

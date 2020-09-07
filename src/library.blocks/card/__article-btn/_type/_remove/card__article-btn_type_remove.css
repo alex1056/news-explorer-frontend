@@ -1,0 +1,13 @@
+.card__article-btn.card__article-btn_type_remove {
+  width: 40px;
+  height: 40px;
+  background: url('../../../../../images/remove-icon-grey.svg');
+  background-size: cover;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.card__article-btn.card__article-btn_type_remove:hover {
+  background: url('../../../../../images/remove-icon-black.svg');
+  transition: background 0.2s;
+}

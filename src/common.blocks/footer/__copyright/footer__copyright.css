@@ -1,0 +1,20 @@
+.footer__copyright {
+  display: flex;
+  font-family: 'Roboto', Verdana, 'Geneva CY', 'San-serif';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  margin: auto 0;
+}
+
+
+@media screen and (max-width: 767px) {
+  .footer__copyright {
+    margin: 0;
+  }
+}

@@ -1,0 +1,7 @@
+.not-found__icon {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  display: flex;
+  margin: 0 auto;
+}

@@ -1,0 +1,7 @@
+@import url('./__item/menu__item.css');
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}

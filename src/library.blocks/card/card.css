@@ -1,0 +1,68 @@
+@import url(./__content-subtitle/card__content-subtitle.css);
+@import url(./__date/card__date.css);
+@import url(./__img/card__img.css);
+@import url(./__notification-text/card__notification-text.css);
+@import url(./__notification/card__notification.css);
+@import url(./__remove-article-btn/card__remove-article-btn.css);
+@import url(./__save-article-btn/card__save-article-btn.css);
+@import url(./__save-article-container/card__save-article-container.css);
+@import url(./__source/result__source.css);
+@import url(./__text/card__text.css);
+@import url(./__text-container/card__text-container.css);
+@import url(./__tag/card__tag.css);
+@import url(./__link/card__link.css);
+@import url(./__img-container/card__img-container.css);
+@import url(./__article-btn/card__article-btn.css);
+
+.card {
+  /* background-color: salmon; */
+  background-color: white;
+  /* display: flex; */
+  /* flex-direction: column; */
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+  height: 576px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* @media screen and (max-width: 1439px) {
+  .card {
+    height: 420px;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    height: 470px;
+    max-width: 330px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    height: 490px;
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .card {
+    height: 490px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card {
+    height: 440px;
+  }
+}

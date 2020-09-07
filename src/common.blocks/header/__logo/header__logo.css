@@ -1,0 +1,18 @@
+.header__logo {
+ font-family: 'Roboto Slab', Georgia, Serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  /* color: white; */
+  margin: auto 0;
+  /* display: flex; */
+  text-align: center;
+}
+
+
+@media screen and (max-width: 767px) {
+  .header__link.header__logo{
+  font-size: 16px;
+   }
+ }

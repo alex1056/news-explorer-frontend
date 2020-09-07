@@ -1,0 +1,9 @@
+@import url('./__item/nav__item.css');
+@import url('./__link/nav__link.css');
+.nav {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    /* font-size: 0; */
+}
