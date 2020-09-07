@@ -1,32 +1,27 @@
 # Дипломный проект. Front-end.
 
-Ссылка на gh-pages [https://alex1056.github.io/news-explorer-frontend/](https://alex1056.github.io/news-explorer-frontend/)
-
+Ссылка на gh-pages [https://diploma-2020.ru/](https://diploma-2020.ru/)
 
 # В текущей версии реализовано:
 
-Верстка отзывчивая:
-- Главная страница
-- страница 'Сохраненные статьи'
-- Попап "Login"
-- Попап "Регистрация"
-- Попап "Успешная регистрация"
+Реализована следующая функциональность:
 
-Весрстка доступна в следующих разрешениях:
-- 1440 px
-- 768 px
-- 320 px
+- 1. Login/logout
+- 2. Поиск новостей через API NewsExplorer
+- 3. Сохранение новости
+- 4. Удаление новости
 
-
-
-### Dependencies:
+### Установка зависимостей:
 
 `npm install`
 
-### Configured two build modes:
+### 3 режима запуска:
 
-**Production:**
-`npm run start`
+**Build:**
+`npm run build`
+
+**Deploy:**
+`npm run deploy`
 
 **Development:**
 `npm run dev`

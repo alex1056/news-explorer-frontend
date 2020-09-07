@@ -53,11 +53,18 @@ export default class Popup {
 
   close() {
     this._popup.classList.remove('popup_is-opened');
+    this._removeEventListeners();
     this.clearContent();
   }
 
   _callBackPopupContent(event) {
     event.stopImmediatePropagation();
+  }
+
+  _escClose(event) {
+    if (event.key === 'Escape') {
+      this.close();
+    }
   }
 
   _setEventListeners() {
@@ -67,7 +74,17 @@ export default class Popup {
       const popupContent = this._popup.querySelector('.popup__content');
       popupContent.addEventListener('click', this._callBackPopupContent.bind(this));
       this._popup.addEventListener('click', this.close.bind(this));
+      this._popup.addEventListener('keyup', this._escClose.bind(this));
     }
+  }
+
+  _removeEventListeners() {
+    const closeButton = this._popup.querySelector('.popup__close');
+    closeButton.addEventListener('click', this.close.bind(this));
+    const popupContent = this._popup.querySelector('.popup__content');
+    popupContent.addEventListener('click', this._callBackPopupContent.bind(this));
+    this._popup.addEventListener('click', this.close.bind(this));
+    this._popup.addEventListener('keyup', this._escClose.bind(this));
   }
 
   _openPopupFromPopup() {

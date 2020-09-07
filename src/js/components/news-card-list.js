@@ -77,6 +77,16 @@ export default class NewsCardList {
     const cardsNumberToShow = this._cardsNumberToShow;
     const pageType = this._pageType;
     this.renderResults({ cardsNumberToShow, pageType });
+    this.renderShowMoreButton();
+    // if (this._pageType !== 'articles') {
+    //   if (this._cardsAmout === this._cardsShown) {
+    //     const showMoreBtn = document.querySelector('.result__btn');
+    //     showMoreBtn.classList.add('result__btn_disabled');
+    //   }
+    // }
+  }
+
+  renderShowMoreButton() {
     if (this._pageType !== 'articles') {
       if (this._cardsAmout === this._cardsShown) {
         const showMoreBtn = document.querySelector('.result__btn');
