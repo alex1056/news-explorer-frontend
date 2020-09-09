@@ -6,24 +6,30 @@
 @import url(./__content-title/search__content-title.css);
 @import url(./__title-subtitle-cont/search__title-subtitle-cont.css);
 
-
 .search {
   width: 100%;
   height: 576px;
   background: url('../../images/image-search.png');
   background-size: cover;
-  display: flex;
+  /* display: flex; */
+  display: block;
   z-index: 1;
 }
 
 @media screen and (max-width: 1439px) {
   .search {
     height: 400px;
-   }
- }
+  }
+}
 
 @media screen and (max-width: 767px) {
- .search{
-  height: 536px;
-   }
- }
+  .search {
+    height: 536px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .search {
+    height: 536px;
+  }
+}

@@ -16,6 +16,6 @@
 
 @media screen and (max-width: 767px) {
   .card__notification-text {
-    display: none;
+    /* display: none; */
   }
 }
