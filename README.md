@@ -13,7 +13,8 @@
 
 - HTML5,
 - CSS,
-- JavaScript.
+- JavaScript,
+- Node.js
 
 Настроена сборка Webpack и deploy на удаленный сервер.
 
