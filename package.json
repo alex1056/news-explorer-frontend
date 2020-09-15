@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
     "build": "NODE_ENV=production rimraf dist && webpack --mode production",
-    "deploy": "NODE_ENV=production gh-pages -d dist"
+    "deploy": "npm run build && scp -r ./dist/* root@135.181.83.128:/root/news-frontend"
   },
   "repository": {
     "type": "git",

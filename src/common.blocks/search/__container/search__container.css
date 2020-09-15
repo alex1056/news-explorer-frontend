@@ -8,7 +8,6 @@
   padding-top: 86px;
 }
 
-
 @media screen and (max-width: 1280px) {
   .search__container {
     width: 452px;
@@ -17,9 +16,11 @@
 
 @media screen and (max-width: 767px) {
   .search__container {
-   padding-top: 86px;
-   justify-content: space-between;
-   padding-right: 16px;
-   padding-left: 16px;
+    padding-top: 86px;
+    justify-content: space-between;
+    padding-right: 16px;
+    padding-left: 16px;
+    width: calc(100% - 32px);
+    max-width: 452px;
   }
 }

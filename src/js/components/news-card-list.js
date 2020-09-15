@@ -77,6 +77,10 @@ export default class NewsCardList {
     const cardsNumberToShow = this._cardsNumberToShow;
     const pageType = this._pageType;
     this.renderResults({ cardsNumberToShow, pageType });
+    this.renderShowMoreButton();
+  }
+
+  renderShowMoreButton() {
     if (this._pageType !== 'articles') {
       if (this._cardsAmout === this._cardsShown) {
         const showMoreBtn = document.querySelector('.result__btn');
@@ -192,8 +196,35 @@ export default class NewsCardList {
     }, 0);
 
     const userName = sessionStorage.getItem('userName') || 'userName';
-    if (arrLength > 0) {
-      str3 = `${userName}, у вас ${numberOfArticles} сохраненных статей`;
+    let str4 = '';
+    if (numberOfArticles > 0) {
+      let artNum = numberOfArticles % 10;
+      if (numberOfArticles > 10 && numberOfArticles < 20) {
+        artNum = 0;
+      }
+      if (numberOfArticles > 20) {
+        artNum = numberOfArticles % 10;
+      }
+      switch (artNum) {
+        case 1:
+          str4 = 'сохраненная статья';
+          break;
+        case 2:
+          str4 = 'сохраненных статьи';
+          break;
+        case 3:
+          str4 = 'сохраненных статьи';
+          break;
+        case 4:
+          str4 = 'сохраненных статьи';
+          break;
+        case 5:
+          str4 = 'сохраненных статей';
+          break;
+        default:
+          str4 = 'сохраненных статей';
+      }
+      str3 = `${userName}, у вас ${numberOfArticles} ${str4}`;
     } else str3 = `${userName}, у вас нет сохраненных статей`;
 
     const subtitleNode = document.querySelector('.intro-art__subtitle');

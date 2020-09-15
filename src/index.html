@@ -122,108 +122,10 @@
           </div>
         </section>
 
-        <!-- Комментарий для Ревью -->
-        <!-- ниже закомментированы 3 формы, если убрать "комментирование кода"
-формы будут показываться в открытом виде для проверки.
-Открыть/скрыть можно модификатором popup_is-opened
--->
-
-        <!-- popup form: 'Вход' begin -->
-        <!--
-      <div id="popupLogin" class="popup popup_is-opened">
-        <div class="popup__content">
-          <img src="../images/close.svg" alt="" class="popup__close" />
-          <h3 class="popup__title">Вход</h3>
-          <form id="formLogin" class="form" name="formLogin">
-            <fieldset class="form__fieldset">
-              <label for="emailField" class="form__label">Email</label>
-              <input type="email" name="emailField" id="email" class="form__input" placeholder="Введите почту"
-                required />
-              <span class="form__err-message">Неправильный формат email</span>
-            </fieldset>
-            <fieldset class="form__fieldset form__fieldset_small-margin">
-              <label for="passwordField" class="form__label">Пароль</label>
-              <input type="password" name="passwordField" id="password" class="form__input" placeholder="Введите пароль"
-                required minlength="8" />
-              <span class="form__err-message"> </span>
-            </fieldset>
-            <button disabled type="submit" id="submit" class="button form__button button__disabled">
-              Зарегистрироваться
-            </button>
-          </form>
-          <div class="popup__reg-enter">
-            <p class="text popup__text">или&nbsp;</p>
-            <a href="#" class="link popup__link">Зарегистрироваться</a>
-          </div>
-        </div>
-      </div> -->
-
-        <!-- popup end -->
-
-        <!-- popup form: 'Регистрация' begin -->
-
-        <!-- <div id="popupRegister" class="popup popup_is-opened">
-        <div class="popup__content">
-          <img src="../images/close.svg" alt="" class="popup__close" />
-          <h3 class="popup__title">Регистрация</h3>
-          <form id="formRegister" class="form" name="formRegister">
-            <fieldset class="form__fieldset">
-              <label for="emailField" class="form__label">Email</label>
-              <input type="email" name="emailField" id="email" class="form__input" placeholder="Введите почту"
-                required />
-              <span class="form__err-message">Неправильный формат email</span>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <label for="passwordField" class="form__label">Пароль</label>
-              <input type="password" name="passwordField" id="password" class="form__input" placeholder="Введите пароль"
-                required />
-              <span class="form__err-message"> </span>
-            </fieldset>
-
-            <fieldset class="form__fieldset form__fieldset_small-margin">
-              <label for="nameField" class="form__label">Имя</label>
-              <input type="text" name="nameField" id="name" class="form__input" placeholder="Введите своё имя" required
-                minlength="2" />
-              <span class="form__err-message"> </span>
-            </fieldset>
-
-            <p class="form__err-message">Такой пользователь уже есть</p>
-            <button type="submit" id="submit" class="button form__button">
-              Зарегистрироваться
-            </button>
-          </form>
-          <div class="popup__reg-enter">
-            <p class="text popup__text">или&nbsp;</p>
-            <a href="#" class="link popup__link">Войти</a>
-          </div>
-        </div>
-      </div> -->
-
-        <!-- popup end -->
-
-        <!-- popup form: 'Успешная регистрация' begin -->
-        <!--
-      <div id="popupSuccessRegistr" class="popup popup_is-opened">
-        <div class="popup__content popup__content_success">
-          <img src="../images/close.svg" alt="" class="popup__close" />
-          <h3 class="popup__title popup__title_success">Пользователь успешно зарегистрирован</h3>
-          <div class="popup__reg-enter">
-            <a href="#" class="link popup__link popup__link_success">Выполнить вход</a>
-          </div>
-        </div>
-      </div>
-      -->
-        <!-- popup end -->
-
-        <!-- Комментарий для Ревью -->
-        <!-- ниже закомментированы блоки Not found и Прелоадер.
-После раскомментирования блоки будут видимымы. Открыть/скрыть можно модификатором not-found_enabled и preloader-block_enabled
--->
-
         <section class="not-found">
           <div class="not-found__container">
             <img
-              src="/src/images/not-found-icon.svg"
+              src="<%=require('./images/not-found-icon.svg').default%>"
               alt="Изображение: Ничего не найдено"
               class="not-found__icon"
             />
@@ -240,99 +142,12 @@
             <p class="text preloader-block__text">Идет поиск новостей</p>
           </div>
         </section>
-        <!-- <section class="result result_enabled"> -->
         <section class="result">
           <div class="result__container">
             <h2 class="content-title result__content-title">
               Результаты поиска
             </h2>
-            <div class="grid-cards result__grid-cards">
-              <!-- <article class="card">
-                <div class="card__save-article-container">
-
-                  <div class="card__notification card__notification_enabled">
-                    <p class="card__notification-text">
-                      Войдите, чтобы сохранять статьи
-                    </p>
-                  </div>
-
-                  <div class="card__save-article-btn"></div>
-                </div>
-                <div class="card__img-container">
-                  <img
-                    src="<%=require('./images/img1.png').default%>"
-                    alt="Природа 1"
-                    class="card__img"
-                  />
-                </div>
-                <div class="card__text-container">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h3 class="content-subtitle card__content-subtitle">
-                    Национальное достояние – парки
-                  </h3>
-                  <p class="text card__text">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может
-                    приобщиться к природе.
-                  </p>
-                  <p class="card__source">Лента.ру</p>
-                </div>
-              </article> -->
-
-              <!-- <article class="card">
-                <div class="card__save-article-container">
-                  <div
-                    class="card__save-article-btn card__save-article-btn_saved"
-                  ></div>
-                </div>
-                <div class="card__img-container">
-                  <img
-                    src="<%=require('./images/img2.png').default%>"
-                    alt="Природа 2"
-                    class="card__img"
-                  />
-                </div>
-                <div class="card__text-container">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h3 class="content-subtitle card__content-subtitle">
-                    Лесные огоньки: история одной фотографии
-                  </h3>
-                  <p class="text card__text">
-                    Фотограф отвлеклась от освещения суровой политической
-                    реальности Мексики, чтобы запечатлеть ускользающую красоту
-                    одного из местных чудес природы.
-                  </p>
-                  <p class="card__source">Медуза</p>
-                </div>
-              </article> -->
-
-              <!-- <article class="card">
-                <div class="card__save-article-container">
-                  <div class="card__remove-article-btn"></div>
-                </div>
-                <div class="card__img-container">
-                  <img
-                    src="<%=require('./images/img3.png').default%>"
-                    alt="Природа 3"
-                    class="card__img"
-                  />
-                </div>
-                <div class="card__text-container">
-                  <p class="card__date">2 августа, 2019</p>
-                  <h3 class="content-subtitle card__content-subtitle">
-                    Национальное достояние – парки
-                  </h3>
-                  <p class="text card__text">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может
-                    приобщиться к природе.
-                  </p>
-                  <p class="card__source">Лента.ру</p>
-                </div>
-              </article> -->
-            </div>
+            <div class="grid-cards result__grid-cards"></div>
             <button class="button result__btn">Показать еще</button>
           </div>
         </section>

@@ -8,6 +8,7 @@ import LoginLogout from '../js/utils/login-logout';
 
 import NewsCard from '../js/components/news-card';
 import NewsCardList from '../js/components/news-card-list';
+import ResultHandler from '../js/components/result-handler';
 
 const {
   URL_MAIN_API,
@@ -21,6 +22,7 @@ const loginLogout = new LoginLogout();
 
 const newsCard = new NewsCard('indexPage');
 const newsCardList = new NewsCardList('grid-cards');
+const resultHandler = new ResultHandler(mainApi, newsCardList, newsCard);
 
 const openMobileMenuButton = document.querySelector('.header__mobile-icon');
 const mobileMenu = document.querySelector('.header__mobile-menu');
@@ -49,19 +51,4 @@ authBtns.forEach((item) => {
   item.addEventListener('click', loginLogout.execListener.bind(loginLogout));
 });
 
-mainApi.getArticles()
-  .then((res) => {
-    newsCardList.setOriginArray(res.data);
-    const sortedArr = newsCardList.sortOriginArray();
-    newsCardList.init('cards', 'cards_enabled', 'articles');
-    sortedArr.forEach((element) => {
-      try {
-        const cardNode = newsCard.create(element);
-        newsCardList.addCard(cardNode);
-      } catch (error) { console.log('Ошибка при создании карточки на articlesPage!'); }
-    });
-    newsCardList.renderResults({ cardsNumberToShow: undefined, pageType: 'articles' });
-    newsCardList.renderResultsBlock('cards', 'cards_enabled', true);
-    newsCardList.renderIntroArt();
-  })
-  .catch((err) => Promise.reject(Error(err.message)));
+resultHandler.getSavedArticles();

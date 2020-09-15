@@ -1,3 +1,4 @@
 .result.result_enabled {
-  display: flex;
+  /* display: flex; */
+  display: block;
 }
